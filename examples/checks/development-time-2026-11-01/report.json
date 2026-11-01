@@ -1,0 +1,59 @@
+{
+  "record_kind": "development_time_documentation_update",
+  "checked_at": "2026-11-01T21:34:07.166997+08:00",
+  "base_commit": "fcaa5bbbe762828e42ebcaeea22dfb0e1be32e62",
+  "development_time": {
+    "hours": 5,
+    "source": "Explicit user confirmation in this chat",
+    "independently_measured": false
+  },
+  "scope": "Record five-hour total development time, remove the personal effective-time field, and align canonical documentation.",
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "1b17125dbfc7c4eddc74fa0f39533d7208dae568f7f882c4af7a51c53663f509",
+      "after_sha256": "a2e4e7c99c34cde722e3ed25c4e432c480950af3326529f8a8e8f830a7f8ff2f"
+    },
+    {
+      "path": "SUBMISSION.md",
+      "before_sha256": "66b3a4f8b10b0ccaf339bdff7ad55bc9a3e2a2f126b42154ddbafd23038de0f6",
+      "after_sha256": "be42e51b418115ac2f6eca2fe881c7972f0b5f29f9c8dd7acf96b1a086534a67"
+    },
+    {
+      "path": "docs/01-requirements.md",
+      "before_sha256": "0ad9e08b96da28905647a0965996d43a9956968ab5f761679460a849cf28ae96",
+      "after_sha256": "606d182ad9229aa77d08b9559e676ba4eb61ff3cf9116f8afe036342f73d0565"
+    },
+    {
+      "path": "docs/03-evaluation.md",
+      "before_sha256": "32622d52ced2c4fca6d6cba7a204a5eea89aad7b177711ec5f74202f23786404",
+      "after_sha256": "9eee12c4ddaa150a7a52ea12e5fa7e3297df736df4012f020bf1b4c06bc68e8d"
+    },
+    {
+      "path": "docs/04-ai-usage.md",
+      "before_sha256": "3844fcd29c4ba6faa3aa6d41db719fa44f4dea2d4d30698c9fe22a2b68361bd1",
+      "after_sha256": "eb02836acdb7997f20b786e3365a38e1eaba6486f86f741577375d0ac4d27eeb"
+    },
+    {
+      "path": "docs/05-retrospective.md",
+      "before_sha256": "6e082488ad1b341add5f2551a46fcea4a2238d1063bb71ed7b56250cc27b6e76",
+      "after_sha256": "4ca23049d3d630cd454bab9ea546103877c16ccf14751747bf8693996c82ff6e"
+    }
+  ],
+  "checks": {
+    "local_links_checked": 116,
+    "missing_links": 0,
+    "removed_effective_time_field": true,
+    "whitespace_with_crlf_policy": "passed",
+    "source_tests_data_dependencies_and_old_evidence_unchanged": true
+  },
+  "business_tests_rerun": false,
+  "real_api_requests_this_edit": 0,
+  "historical_evidence_policy": "Earlier records retain their original timestamps and uncertainty; they are not rewritten.",
+  "remaining_limits": [
+    "Independent human semantic review",
+    "Large-sample stability",
+    "Clean-environment validation",
+    "Final-version full rerun of the four extra live boundary tests"
+  ]
+}

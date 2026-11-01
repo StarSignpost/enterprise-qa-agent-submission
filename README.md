@@ -112,4 +112,4 @@ try {
 
 检索只是少量短语与中文双字匹配，可能漏召回/误召回；分数和新日期不是权威。同模型语义复核可能误判，片段存在不能保证支持结论。没有大样本效果、重复稳定性、独立人工语义验收、干净环境或其他操作系统验证；不宣称生产可用。
 
-题号为3，按用户选择新建[公开GitHub仓库](https://github.com/StarSignpost/enterprise-qa-agent-submission)，已核对无认证页面可读。分支main，完整commit SHA在本次交付回复给出，可用git rev-parse HEAD核验，见[SUBMISSION](SUBMISSION.md)。提交与推送由AI代执行，使用公开账号及noreply邮箱。原始卷面含个人信息/专属链接，按 `.gitignore` 排除；仅提交必要合成资料。协作分工、实际验证和学习总结分别见[使用说明](docs/04-ai-usage.md)与[项目复盘](docs/05-retrospective.md)，个人工时仍待补充。
+题号为3，按用户选择新建[公开GitHub仓库](https://github.com/StarSignpost/enterprise-qa-agent-submission)，已核对无认证页面可读。分支main，完整commit SHA在本次交付回复给出，可用git rev-parse HEAD核验，见[SUBMISSION](SUBMISSION.md)。提交与推送由AI代执行，使用公开账号及noreply邮箱。原始卷面含个人信息/专属链接，按 `.gitignore` 排除；仅提交必要合成资料。总开发用时为5小时。协作分工、实际验证和学习总结分别见[使用说明](docs/04-ai-usage.md)与[项目复盘](docs/05-retrospective.md)。
