@@ -59,4 +59,4 @@
 
 ## 6. 交付与未完成项
 
-当前核对 `src/`、`tests/`、必要 `data/`、`examples/`、README、本文及02—05、requirements.txt与.env.example。详细文件、哈希和证据范围见交付核对报告。题号3已明确；Git仓库已初始化，公开URL及页面可读性已核验；完整SHA与推送后HEAD在交付回复中提供。个人实际用时、会话外贡献与个人学习收获由用户据实补充，不影响本轮先完成可核对的文档。
+当前核对 `src/`、`tests/`、必要 `data/`、`examples/`、README、本文及02—05、requirements.txt与.env.example。详细文件、哈希和证据范围见交付核对报告。题号3已明确；Git仓库已初始化，公开URL及页面可读性已核验；完整SHA与推送后HEAD在交付回复中提供。个人工时与会话外贡献仍待补充，学习总结见[项目复盘](05-retrospective.md)。

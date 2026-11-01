@@ -1,0 +1,69 @@
+{
+  "record_kind": "retrospective_wording_revision",
+  "checked_at": "2026-11-01T21:24:59.500727+08:00",
+  "base_commit": "ab3f062183077a844f50841392db0b1bf5195786",
+  "scope": "First-person retrospective; remove repeated drafting notices and update cross-references. Preserve factual results and the dedicated collaboration record.",
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "2375b2a827c6b5869cadc1fb3b5e15c93a7e07368a5fd593641a9dda4ceb34fe",
+      "after_sha256": "1b17125dbfc7c4eddc74fa0f39533d7208dae568f7f882c4af7a51c53663f509"
+    },
+    {
+      "path": "docs/01-requirements.md",
+      "before_sha256": "c07385b78b3c0e06d535208291fe13826d957531e9ded08aeb226f60616066e6",
+      "after_sha256": "0ad9e08b96da28905647a0965996d43a9956968ab5f761679460a849cf28ae96"
+    },
+    {
+      "path": "docs/03-evaluation.md",
+      "before_sha256": "a895ddb27511b48da326d81278c7cf62856b2f6c77ae61e84c1309ada6a0c1b2",
+      "after_sha256": "32622d52ced2c4fca6d6cba7a204a5eea89aad7b177711ec5f74202f23786404"
+    },
+    {
+      "path": "docs/04-ai-usage.md",
+      "before_sha256": "3b174a38a239fd406bf7cb60fcf1e00e17d75449ac3cf7f909a08992febee828",
+      "after_sha256": "3844fcd29c4ba6faa3aa6d41db719fa44f4dea2d4d30698c9fe22a2b68361bd1"
+    },
+    {
+      "path": "docs/05-retrospective.md",
+      "before_sha256": "353f8a2c77b6d1257e7fa768b12dc18f514ad33d865d6deda22726cf4fa01779",
+      "after_sha256": "6e082488ad1b341add5f2551a46fcea4a2238d1063bb71ed7b56250cc27b6e76"
+    }
+  ],
+  "checks": {
+    "utf8_read": "passed",
+    "local_markdown_links_checked": 116,
+    "missing_local_links": [],
+    "git_diff_whitespace_with_crlf_policy": "passed",
+    "source_tests_data_dependencies_and_previous_evidence_unchanged": true,
+    "time_table_contiguous": true
+  },
+  "saved_results_referenced": {
+    "offline": {
+      "path": "examples/improvements/synonym-001/offline/test-report.json",
+      "counts": {
+        "passed": 70,
+        "failed": 0,
+        "error": 0,
+        "not_run": 12
+      },
+      "rerun_for_this_edit": false
+    },
+    "real_six": {
+      "path": "examples/real/final-six-2026-11-01/test-report.json",
+      "counts": {
+        "passed": 6,
+        "failed": 0,
+        "error": 0,
+        "not_run": 0
+      },
+      "rerun_for_this_edit": false
+    }
+  },
+  "business_tests_rerun": false,
+  "real_api_requests_this_edit": 0,
+  "unverified": [
+    "Independent personal review and total personal hours remain unconfirmed."
+  ],
+  "historical_audits": "Earlier evidence and manifests remain immutable snapshots of their original commits."
+}
