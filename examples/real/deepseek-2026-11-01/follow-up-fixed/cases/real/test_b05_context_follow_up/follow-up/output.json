@@ -1,0 +1,31 @@
+{
+  "run_id": "3de8cf82-c5ff-4549-8d10-4d8890e9e102",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "按《差旅报销材料》（2026-10-01）规定，差旅报销需提交两份材料：**发票** 和 **出差审批单**。该文档只有这一条规定，未涉及单据份数、发票类型、是否需要行程单/住宿明细等更细要求；如需这些细节，可提供更具体的制度文档以便核查。",
+  "citations": [
+    {
+      "document_id": "D03",
+      "version_date": "2026-10-01",
+      "quote": "差旅报销需提交发票和出差审批单。",
+      "start": 0,
+      "end": 16,
+      "read_call_id": "call_00_Sj6dH7G4Q1wyGg1mwVwB5575"
+    }
+  ],
+  "gaps": [],
+  "status": "completed",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 2,
+  "api_calls": 5,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "supported",
+      "reason": "D03原文明确差旅报销需提交发票和出差审批单，引用片段的起止位置与文字相符，回答据此作答，并如实说明无更细要求，没有把期限等其他条款混作依据。",
+      "method": "same_model_review",
+      "mode": "real"
+    }
+  }
+}

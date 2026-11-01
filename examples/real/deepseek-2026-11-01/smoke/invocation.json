@@ -1,0 +1,18 @@
+{
+  "entry_command": [
+    "python",
+    "-m",
+    "tests.run_private_live",
+    "--model",
+    "deepseek-flash",
+    "--output-dir",
+    "examples/real/deepseek-2026-11-01/smoke",
+    "--test",
+    "tests.test_live.LiveAcceptanceTests.test_b01_clear_answer"
+  ],
+  "credential_channel": "hidden getpass input; process environment only",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "key_saved": false,
+  "delegated_module": "tests.run_validation"
+}

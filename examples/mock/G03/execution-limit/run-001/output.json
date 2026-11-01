@@ -1,0 +1,20 @@
+{
+  "run_id": "bfd7c943-abe6-407a-bb4c-a4a5ad8eee30",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "answer": "未完成：决策额度已耗尽，尚未得到有效终态或完成证据复核",
+  "citations": [],
+  "gaps": [
+    "决策额度已耗尽，尚未得到有效终态或完成证据复核"
+  ],
+  "status": "incomplete",
+  "termination_source": "guard",
+  "error_code": "EXECUTION_LIMIT",
+  "steps_used": 2,
+  "tool_calls": 2,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "not_accepted",
+    "semantic_support": "not_accepted"
+  }
+}

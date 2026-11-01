@@ -1,0 +1,43 @@
+{
+  "run_id": "03b3848b-44ac-4e56-9270-450c7c85d8ff",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "started_at": "2026-11-01T16:51:19.507276+08:00",
+  "finished_at": "2026-11-01T16:51:19.517533+08:00",
+  "command": [
+    "python",
+    "-m",
+    "src.cli",
+    "--mode",
+    "mock",
+    "--data",
+    "data/scenarios/normal.json",
+    "--input",
+    "examples/inputs/follow_up_start.json",
+    "--max-steps",
+    "8",
+    "--output-dir",
+    "examples/mock/G01/follow-up/turn-01/run-001",
+    "--mock-script",
+    "tests/fixtures/mock_actions/normal.json"
+  ],
+  "python_version": "3.10.0",
+  "max_steps": 8,
+  "steps_used": 4,
+  "tool_calls": 2,
+  "api_calls": 0,
+  "status": "completed",
+  "termination_source": "model",
+  "data_sha256": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+  "source_sha256": {
+    "src/__init__.py": "26dda23055721ab2921774dcdcc244517b5566e25a83a4be7e08dda97e688d3d",
+    "src/agent.py": "a9b2b3f1d27b7f94bf6a07025cefd6ab29199fb3c3dae119a6d2f5ed484dc7b1",
+    "src/cli.py": "6d46154e00a647efa06185feab8bb089f2d9aeab5ca80b7922ec2cc23d8671e1",
+    "src/mock_model.py": "956f50d8c71432b10af5c45a09c37813d3745478990d329e11f5a445b2c3ca93",
+    "src/models.py": "8c5e62590d01141c6539e288f0592a08d38a8fd3a707e0b29b070423a01feae9",
+    "src/prompts.py": "429ef504233d33f8d046f2c9e2cc44f77ae34b6f24a20051329c64778d9ce007",
+    "src/tools.py": "9a31a67fb57b6eb12aec461b5e1b13843439cdcffa19694e9170fec421f5ad6b",
+    "src/validation.py": "243a826a7e0baaafb1d55af65b33622e742bd7793fd92496601c8c440cc5f93b"
+  },
+  "mock_script_sha256": "00f6f2a5f5bb1d0546ca453d7b9f0014b0c4e1eb109410e5549f6946fe44fdf6"
+}

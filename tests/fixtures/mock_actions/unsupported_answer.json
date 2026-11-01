@@ -1,0 +1,60 @@
+{
+  "mode": "mock",
+  "description": "Scripted offline test actions; not real model decisions",
+  "actions": [
+    {
+      "name": "search_documents",
+      "arguments": {
+        "query": "报销期限",
+        "limit": 5,
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    },
+    {
+      "name": "read_document",
+      "arguments": {
+        "document_id": "D01",
+        "start": 0,
+        "length": 500,
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    },
+    {
+      "name": "answer",
+      "arguments": {
+        "answer": "宠物医疗费可以报销。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "mock-2"
+          }
+        ],
+        "gaps": [],
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    },
+    {
+      "name": "assess_answer",
+      "arguments": {
+        "verdict": "unsupported",
+        "reason": "期限条款不能证明报销项目范围"
+      }
+    },
+    {
+      "name": "stop",
+      "arguments": {
+        "answer": "未取得足够资料，无法完成。",
+        "citations": [],
+        "gaps": [
+          "需要相关制度或恢复原文读取"
+        ],
+        "status": "incomplete",
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    }
+  ]
+}

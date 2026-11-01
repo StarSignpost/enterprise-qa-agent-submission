@@ -1,0 +1,14 @@
+{
+  "record_kind": "github_public_read_verified",
+  "recorded_at": "2026-11-01T20:49:27.947266+08:00",
+  "user_instruction": "新建仓库，公开",
+  "html_url": "https://github.com/StarSignpost/enterprise-qa-agent-submission",
+  "full_name": "StarSignpost/enterprise-qa-agent-submission",
+  "private": false,
+  "visibility_change_http_status": 200,
+  "unauthenticated_web_http_status": 200,
+  "authentication_sent": false,
+  "reviewer_read_access": "public repository readable without authentication",
+  "files_pushed_yet": false,
+  "note": "匿名api.github.com读取遇到HTTP403 rate limit exceeded；改用无认证github.com页面验证，不重复请求限流接口。"
+}

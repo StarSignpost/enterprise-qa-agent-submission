@@ -1,0 +1,775 @@
+{
+  "record_kind": "final_runtime_six_business_audit",
+  "checked_at": "2026-11-01T20:46:42.815420+08:00",
+  "executed_by": "AI",
+  "mode": "real",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "max_steps": 8,
+  "reasoning_effort": "none",
+  "counts": {
+    "passed": 6,
+    "failed": 0,
+    "error": 0,
+    "not_run": 0
+  },
+  "case_bundles": 8,
+  "api_requests": 41,
+  "final_citations_checked": 10,
+  "all_source_and_test_hashes_match_current": true,
+  "tool_feedback_to_next_request_checked": true,
+  "no_mock_downgrade": true,
+  "cases": [
+    {
+      "evidence": "cases/real/test_b01_clear_answer/normal",
+      "question": "报销期限多久？",
+      "history": [],
+      "status": "completed",
+      "api_calls": 4,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销期限",
+            "limit": 10,
+            "decision_summary": "检索报销期限相关制度候选"
+          }
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取报销期限制度原文核实"
+          }
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "arguments": {
+            "answer": "根据《报销期限》（2026-10-01 版），报销期限为 30 天。该文档未进一步说明 30 天从何时起算（如费用发生日或发票开具日），如有需要可按具体情况进一步确认。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_FuJc8zzcDjjYkbcsQVH86858"
+              }
+            ],
+            "gaps": [],
+            "decision_summary": "检索到《报销期限》文档并读取原文，原文明确报销期限为 30 天，据此作答。"
+          }
+        },
+        {
+          "step": 4,
+          "action": "assess_answer",
+          "arguments": {
+            "reason": "原文“报销期限 30 天。”逐字支持引用，回答仅陈述该期限并说明起算日未载明，未过度推广。",
+            "verdict": "supported"
+          }
+        }
+      ],
+      "answer": "根据《报销期限》（2026-10-01 版），报销期限为 30 天。该文档未进一步说明 30 天从何时起算（如费用发生日或发票开具日），如有需要可按具体情况进一步确认。",
+      "citations": [
+        {
+          "document_id": "D01",
+          "version_date": "2026-10-01",
+          "quote": "报销期限 30 天。",
+          "start": 0,
+          "end": 10,
+          "read_call_id": "call_00_FuJc8zzcDjjYkbcsQVH86858"
+        }
+      ],
+      "gaps": [],
+      "validation_errors": []
+    },
+    {
+      "evidence": "cases/real/test_b02_conflicting_documents/conflict",
+      "question": "报销期限多久？",
+      "history": [],
+      "status": "needs_clarification",
+      "api_calls": 5,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销期限",
+            "limit": 10,
+            "decision_summary": "检索报销期限相关制度候选，需读取原文确认具体时限与适用范围。"
+          }
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "arguments": {
+            "decision_summary": "两份同名制度分别称30天与15天，先读取D01原文确认其内容与适用范围。",
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000
+          }
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "arguments": {
+            "decision_summary": "读取D02原文，核对15天期限的表述及与D01的适用关系。",
+            "document_id": "D02",
+            "start": 0,
+            "length": 2000
+          }
+        },
+        {
+          "step": 5,
+          "action": "clarify",
+          "arguments": {
+            "answer": "检索到两份同名、同标题的制度文件《报销期限》，但时限不一致，且原文均未说明适用范围或优先关系，无法判断应以哪份为准：\n\n- D01（版本日期 2026-10-01）：原文为\"报销期限 30 天。\"\n- D02（版本日期 2026-10-15）：原文为\"报销期限 15 天。\"\n\n由于内容直接冲突、缺少适用范围与效力条款，我不能擅自选择其一。请确认应以哪份制度为准（或说明适用场景/费用类型），我再据此给出结论。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_q0igVQmxXaSWz5yi5Uot8508"
+              },
+              {
+                "document_id": "D02",
+                "version_date": "2026-10-15",
+                "quote": "报销期限 15 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_itCr9YyE3Zo23vfXdVz07069"
+              }
+            ],
+            "gaps": [
+              "两份制度对报销期限规定冲突（30天 vs 15天），均无适用范围与效力优先条款",
+              "无法确定哪份制度当前有效或适用于用户的具体报销场景"
+            ],
+            "decision_summary": "检索到两份同名《报销期限》文件，原文分别规定30天和15天，均未载明适用范围或优先级，证据矛盾，需用户确认适用制度后再答。"
+          }
+        }
+      ],
+      "answer": "检索到两份同名、同标题的制度文件《报销期限》，但时限不一致，且原文均未说明适用范围或优先关系，无法判断应以哪份为准：\n\n- D01（版本日期 2026-10-01）：原文为\"报销期限 30 天。\"\n- D02（版本日期 2026-10-15）：原文为\"报销期限 15 天。\"\n\n由于内容直接冲突、缺少适用范围与效力条款，我不能擅自选择其一。请确认应以哪份制度为准（或说明适用场景/费用类型），我再据此给出结论。",
+      "citations": [
+        {
+          "document_id": "D01",
+          "version_date": "2026-10-01",
+          "quote": "报销期限 30 天。",
+          "start": 0,
+          "end": 10,
+          "read_call_id": "call_00_q0igVQmxXaSWz5yi5Uot8508"
+        },
+        {
+          "document_id": "D02",
+          "version_date": "2026-10-15",
+          "quote": "报销期限 15 天。",
+          "start": 0,
+          "end": 10,
+          "read_call_id": "call_00_itCr9YyE3Zo23vfXdVz07069"
+        }
+      ],
+      "gaps": [
+        "两份制度对报销期限规定冲突（30天 vs 15天），均无适用范围与效力优先条款",
+        "无法确定哪份制度当前有效或适用于用户的具体报销场景"
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ]
+    },
+    {
+      "evidence": "cases/real/test_b03_outside_corpus_with_partial_keyword_hits/outside",
+      "question": "公司是否报销宠物医疗费？",
+      "history": [],
+      "status": "incomplete",
+      "api_calls": 6,
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents",
+          "arguments": {
+            "query": "宠物 医疗费 报销 费用报销范围",
+            "limit": 10,
+            "decision_summary": "检索报销制度中关于宠物医疗费用的规定"
+          }
+        },
+        {
+          "step": 3,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销范围 可报销项目 员工福利",
+            "limit": 10,
+            "decision_summary": "检索报销范围与员工福利相关规定"
+          }
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 1000,
+            "decision_summary": "读取报销期限原文确认是否涉及报销范围"
+          }
+        },
+        {
+          "step": 5,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D03",
+            "start": 0,
+            "length": 1000,
+            "decision_summary": "读取差旅报销材料原文确认是否涉及宠物医疗费"
+          }
+        },
+        {
+          "step": 6,
+          "action": "stop",
+          "arguments": {
+            "answer": "资料不足，无法确认公司是否报销宠物医疗费。检索仅命中《报销期限》（D01）和《差旅报销材料》（D03）两份文档，均未涉及报销范围或宠物医疗费：D01 仅规定报销期限 30 天，D03 仅规定差旅报销需提交发票和出差审批单。现有制度资料中没有关于宠物医疗费是否属于报销范围的规定，故不能据此给出报销或不报销的结论。建议补充或指定适用的费用报销制度（含报销范围/不予报销项目清单）后再确认。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_qrzWPkrr4KoGjLNOCKgp2256"
+              },
+              {
+                "document_id": "D03",
+                "version_date": "2026-10-01",
+                "quote": "差旅报销需提交发票和出差审批单。",
+                "start": 0,
+                "end": 16,
+                "read_call_id": "call_00_dQOXBDusNNIEAjom2sEb2295"
+              }
+            ],
+            "gaps": [
+              "缺少规定报销范围/不予报销项目的费用报销制度文档",
+              "两份候选文档均未涉及宠物医疗费，无任何可支持结论的条款"
+            ],
+            "decision_summary": "两轮检索仅命中报销期限与差旅报销材料两份文档，读取原文后确认均不涉及报销范围或宠物医疗费，无证据支撑结论，故停止并说明缺口。",
+            "status": "incomplete"
+          }
+        }
+      ],
+      "answer": "资料不足，无法确认公司是否报销宠物医疗费。检索仅命中《报销期限》（D01）和《差旅报销材料》（D03）两份文档，均未涉及报销范围或宠物医疗费：D01 仅规定报销期限 30 天，D03 仅规定差旅报销需提交发票和出差审批单。现有制度资料中没有关于宠物医疗费是否属于报销范围的规定，故不能据此给出报销或不报销的结论。建议补充或指定适用的费用报销制度（含报销范围/不予报销项目清单）后再确认。",
+      "citations": [
+        {
+          "document_id": "D01",
+          "version_date": "2026-10-01",
+          "quote": "报销期限 30 天。",
+          "start": 0,
+          "end": 10,
+          "read_call_id": "call_00_qrzWPkrr4KoGjLNOCKgp2256"
+        },
+        {
+          "document_id": "D03",
+          "version_date": "2026-10-01",
+          "quote": "差旅报销需提交发票和出差审批单。",
+          "start": 0,
+          "end": 16,
+          "read_call_id": "call_00_dQOXBDusNNIEAjom2sEb2295"
+        }
+      ],
+      "gaps": [
+        "缺少规定报销范围/不予报销项目的费用报销制度文档",
+        "两份候选文档均未涉及宠物医疗费，无任何可支持结论的条款"
+      ],
+      "validation_errors": [
+        {
+          "step": 1,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ]
+    },
+    {
+      "evidence": "cases/real/test_b04_paraphrase_preserves_facts_and_sources/original",
+      "question": "报销期限多久？",
+      "history": [],
+      "status": "completed",
+      "api_calls": 5,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销期限",
+            "limit": 10,
+            "decision_summary": "检索报销期限相关制度候选"
+          }
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取报销期限制度原文以确认适用范围与具体规定"
+          }
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "arguments": {
+            "answer": "按《报销期限》制度，报销期限为 30 天。该文档未说明 30 天的起算时点（如从费用发生日、发票开具日还是报销申请日算起），如需确认起算规则或逾期处理，需查阅其他制度或向财务部门确认。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_K3VcAW6T04iYDi8piDdb4540"
+              }
+            ],
+            "gaps": [
+              "《报销期限》未说明 30 天的起算时点和逾期处理方式"
+            ],
+            "decision_summary": "检索到《报销期限》文档并读取原文，其中明确报销期限为 30 天；文档仅一句话，未涉及起算时点与逾期处理。"
+          }
+        },
+        {
+          "step": 4,
+          "action": "answer",
+          "arguments": {
+            "answer": "按《报销期限》制度，报销期限为 30 天。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "end": 10,
+                "quote": "报销期限 30 天。",
+                "read_call_id": "call_00_K3VcAW6T04iYDi8piDdb4540",
+                "start": 0,
+                "version_date": "2026-10-01"
+              }
+            ],
+            "decision_summary": "检索到《报销期限》文档并读取原文，其中明确报销期限为 30 天。",
+            "gaps": []
+          }
+        },
+        {
+          "step": 5,
+          "action": "assess_answer",
+          "arguments": {
+            "verdict": "supported",
+            "reason": "引用原文“报销期限 30 天。”直接支持回答，且检索到的一致候选无冲突，未过度推广适用范围。"
+          }
+        }
+      ],
+      "answer": "按《报销期限》制度，报销期限为 30 天。",
+      "citations": [
+        {
+          "document_id": "D01",
+          "end": 10,
+          "quote": "报销期限 30 天。",
+          "read_call_id": "call_00_K3VcAW6T04iYDi8piDdb4540",
+          "start": 0,
+          "version_date": "2026-10-01"
+        }
+      ],
+      "gaps": [],
+      "validation_errors": [
+        {
+          "step": 3,
+          "code": "FINAL_OUTPUT_INVALID"
+        }
+      ]
+    },
+    {
+      "evidence": "cases/real/test_b04_paraphrase_preserves_facts_and_sources/paraphrase",
+      "question": "费用报销最迟得在多少天内办？",
+      "history": [],
+      "status": "completed",
+      "api_calls": 4,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "费用报销 时限 天数 内 办理",
+            "limit": 10,
+            "decision_summary": "检索费用报销时限相关制度候选"
+          }
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取报销期限原文核实天数与起算方式"
+          }
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "arguments": {
+            "answer": "根据《报销期限》（2026-10-01 版），报销期限为 30 天。原文未说明该 30 天从何时起算，也未区分费用类型，实际办理时建议向财务确认起算日（如发票日期或出差结束日）。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_05ae5zyPSJV8QqwwLQ1k1087"
+              }
+            ],
+            "gaps": [],
+            "decision_summary": "检索到一篇《报销期限》制度，原文仅规定\"报销期限 30 天\"，未涉及起算日。另有差旅报销材料文档，仅涉及材料清单不含期限，未引用。"
+          }
+        },
+        {
+          "step": 4,
+          "action": "assess_answer",
+          "arguments": {
+            "verdict": "supported",
+            "reason": "引用原文\"报销期限 30 天\"直接支持30天的结论，并如实说明起算日与费用分类未明确，未作过度推广。"
+          }
+        }
+      ],
+      "answer": "根据《报销期限》（2026-10-01 版），报销期限为 30 天。原文未说明该 30 天从何时起算，也未区分费用类型，实际办理时建议向财务确认起算日（如发票日期或出差结束日）。",
+      "citations": [
+        {
+          "document_id": "D01",
+          "version_date": "2026-10-01",
+          "quote": "报销期限 30 天。",
+          "start": 0,
+          "end": 10,
+          "read_call_id": "call_00_05ae5zyPSJV8QqwwLQ1k1087"
+        }
+      ],
+      "gaps": [],
+      "validation_errors": []
+    },
+    {
+      "evidence": "cases/real/test_b05_context_follow_up/first",
+      "question": "差旅报销期限多久？",
+      "history": [],
+      "status": "needs_clarification",
+      "api_calls": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "差旅报销期限",
+            "limit": 10,
+            "decision_summary": "查找差旅制度中关于报销期限的规定"
+          }
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取报销期限制度原文确认期限与适用范围"
+          }
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "arguments": {
+            "answer": "根据《报销期限》制度，报销期限为 30 天。注意：该原文未说明起算时间、是否适用于差旅报销及跨月/跨年处理方式，如需据此执行请先向财务确认。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_sW4zNRR26XMVvynzxwV94210"
+              }
+            ],
+            "gaps": [],
+            "decision_summary": "检索到《报销期限》并读取全文，原文仅记载“报销期限 30 天”，可作为期限依据；原文未明确起算时间和差旅适用细节，已在回答中提示确认。"
+          }
+        },
+        {
+          "step": 4,
+          "action": "assess_answer",
+          "arguments": {
+            "verdict": "insufficient",
+            "reason": "D01原文仅称“报销期限30天”，未明确适用于差旅报销及起算方式，不足以直接支撑差旅报销期限为30天的结论。"
+          }
+        },
+        {
+          "step": 5,
+          "action": "search_documents",
+          "arguments": {
+            "decision_summary": "补充检索差旅费管理规定中报销时效条款",
+            "limit": 10,
+            "query": "差旅费 报销 时效 出差结束后 天内"
+          }
+        },
+        {
+          "step": 6,
+          "action": "read_document",
+          "arguments": {
+            "decision_summary": "读取差旅报销材料原文，核对是否含期限条款",
+            "document_id": "D03",
+            "length": 2000,
+            "start": 0
+          }
+        },
+        {
+          "step": 7,
+          "action": "answer",
+          "arguments": {
+            "answer": "可查到的规则如下：单独的《报销期限》制度规定“报销期限 30 天”，但该原文未写明起算时间，也未明确是否限定适用于差旅报销；《差旅报销材料》仅规定需提交发票和出差审批单，未涉及期限。因此，差旅报销是否即为出差后 30 天内，制度原文无直接依据，建议向财务部门确认后再执行。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_sW4zNRR26XMVvynzxwV94210"
+              },
+              {
+                "document_id": "D03",
+                "version_date": "2026-10-01",
+                "quote": "差旅报销需提交发票和出差审批单。",
+                "start": 0,
+                "end": 16,
+                "read_call_id": "call_00_1yxQYlqeN8hQBHtgP40P6904"
+              }
+            ],
+            "decision_summary": "检索并读取了《报销期限》和《差旅报销材料》两份原文：前者仅称“报销期限30天”，未明确适用范围与起算时间；后者只列报销材料。已如实呈现证据并指出差旅适用性缺口，未擅自推定。",
+            "gaps": [
+              "现有制度原文未明确“30天报销期限”是否适用于差旅报销",
+              "未明确报销期限的起算时间（如出差结束日、发票开具日）",
+              "未找到专门的差旅费管理制度中关于报销时效的条款"
+            ]
+          }
+        },
+        {
+          "step": 8,
+          "action": "clarify",
+          "arguments": {
+            "answer": "现有制度原文无法完整回答“差旅报销期限”。可查到的内容是：单独的《报销期限》文件记载“报销期限 30 天”，但该原文未写明起算时间，也未说明是否适用于差旅报销；《差旅报销材料》仅规定需提交发票和出差审批单，未涉及期限。请确认：“报销期限 30 天”这一规定是否适用于差旅报销、从何时起算？确认后我再据此给出明确答复。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "end": 10,
+                "quote": "报销期限 30 天。",
+                "read_call_id": "call_00_sW4zNRR26XMVvynzxwV94210",
+                "start": 0,
+                "version_date": "2026-10-01"
+              },
+              {
+                "document_id": "D03",
+                "end": 16,
+                "quote": "差旅报销需提交发票和出差审批单。",
+                "read_call_id": "call_00_1yxQYlqeN8hQBHtgP40P6904",
+                "start": 0,
+                "version_date": "2026-10-01"
+              }
+            ],
+            "decision_summary": "检索到《报销期限》与《差旅报销材料》，均已读取全文。前者只称“报销期限30天”，未明确差旅适用性与起算时间；后者不含期限条款。证据不足，需请用户确认适用范围后答复。",
+            "gaps": [
+              "《报销期限》“30天”是否适用于差旅报销，原文未明确",
+              "报销期限的起算时间（出差结束日、发票开具日等）未规定",
+              "未检索到专门的差旅费管理制度中的报销时效条款"
+            ]
+          }
+        }
+      ],
+      "answer": "现有制度原文无法完整回答“差旅报销期限”。可查到的内容是：单独的《报销期限》文件记载“报销期限 30 天”，但该原文未写明起算时间，也未说明是否适用于差旅报销；《差旅报销材料》仅规定需提交发票和出差审批单，未涉及期限。请确认：“报销期限 30 天”这一规定是否适用于差旅报销、从何时起算？确认后我再据此给出明确答复。",
+      "citations": [
+        {
+          "document_id": "D01",
+          "end": 10,
+          "quote": "报销期限 30 天。",
+          "read_call_id": "call_00_sW4zNRR26XMVvynzxwV94210",
+          "start": 0,
+          "version_date": "2026-10-01"
+        },
+        {
+          "document_id": "D03",
+          "end": 16,
+          "quote": "差旅报销需提交发票和出差审批单。",
+          "read_call_id": "call_00_1yxQYlqeN8hQBHtgP40P6904",
+          "start": 0,
+          "version_date": "2026-10-01"
+        }
+      ],
+      "gaps": [
+        "《报销期限》“30天”是否适用于差旅报销，原文未明确",
+        "报销期限的起算时间（出差结束日、发票开具日等）未规定",
+        "未检索到专门的差旅费管理制度中的报销时效条款"
+      ],
+      "validation_errors": [
+        {
+          "step": 7,
+          "code": "FINAL_OUTPUT_INVALID"
+        }
+      ]
+    },
+    {
+      "evidence": "cases/real/test_b05_context_follow_up/follow-up",
+      "question": "那需要什么材料？",
+      "history": [
+        {
+          "role": "user",
+          "content": "差旅报销期限多久？"
+        },
+        {
+          "role": "assistant",
+          "content": "现有制度原文无法完整回答“差旅报销期限”。可查到的内容是：单独的《报销期限》文件记载“报销期限 30 天”，但该原文未写明起算时间，也未说明是否适用于差旅报销；《差旅报销材料》仅规定需提交发票和出差审批单，未涉及期限。请确认：“报销期限 30 天”这一规定是否适用于差旅报销、从何时起算？确认后我再据此给出明确答复。"
+        }
+      ],
+      "status": "completed",
+      "api_calls": 4,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "差旅报销 材料 发票 出差审批单",
+            "limit": 10,
+            "decision_summary": "查找差旅报销所需材料的制度原文"
+          }
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D03",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取差旅报销材料原文以引用准确条文"
+          }
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "arguments": {
+            "answer": "按《差旅报销材料》的规定，差旅报销需提交两项材料：发票和出差审批单。该文件未列出其他材料；如实际报销还可能涉及票据粘贴单、行程单等，制度原文中并无依据。",
+            "citations": [
+              {
+                "document_id": "D03",
+                "version_date": "2026-10-01",
+                "quote": "差旅报销需提交发票和出差审批单。",
+                "start": 0,
+                "end": 16,
+                "read_call_id": "call_00_Im3bGppyG1zdiS4PMSwj2768"
+              }
+            ],
+            "gaps": [],
+            "decision_summary": "检索到《差旅报销材料》（D03）并读取全文，原文明确列出报销所需两项材料，据此作答。"
+          }
+        },
+        {
+          "step": 4,
+          "action": "assess_answer",
+          "arguments": {
+            "verdict": "supported",
+            "reason": "引用原文明确列出差旅报销需发票和出差审批单两项材料，回答与之一致，并已说明该文件未涉及其他材料。"
+          }
+        }
+      ],
+      "answer": "按《差旅报销材料》的规定，差旅报销需提交两项材料：发票和出差审批单。该文件未列出其他材料；如实际报销还可能涉及票据粘贴单、行程单等，制度原文中并无依据。",
+      "citations": [
+        {
+          "document_id": "D03",
+          "version_date": "2026-10-01",
+          "quote": "差旅报销需提交发票和出差审批单。",
+          "start": 0,
+          "end": 16,
+          "read_call_id": "call_00_Im3bGppyG1zdiS4PMSwj2768"
+        }
+      ],
+      "gaps": [],
+      "validation_errors": []
+    },
+    {
+      "evidence": "cases/real/test_b06_tool_failure_has_explicit_cause/failure",
+      "question": "报销期限多久？",
+      "history": [],
+      "status": "failed",
+      "api_calls": 5,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销期限",
+            "limit": 10,
+            "decision_summary": "检索报销期限相关制度原文"
+          }
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取 D01 原文核实报销期限规定"
+          }
+        },
+        {
+          "step": 3,
+          "action": "search_documents",
+          "arguments": {
+            "query": "费用报销 时限 天",
+            "limit": 10,
+            "decision_summary": "原文读取工具故障，尝试用另一查询获取可读候选"
+          }
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "重试读取 D01 原文，以取得可引用原文再作答"
+          }
+        },
+        {
+          "step": 5,
+          "action": "stop",
+          "arguments": {
+            "answer": "未能完成回答。检索到候选文档 D01《报销期限》（版本日期 2026-10-01，摘要显示\"报销期限 30 天\"），但原文读取工具连续两次返回 TOOL_UNAVAILABLE（不可重试），因此本轮无法取得原文，不能据此确认并引用具体期限规定。建议稍后重试或改由人工查阅该制度原文。",
+            "status": "failed",
+            "gaps": [
+              "仅凭检索摘要不能确认报销期限的适用范围与起算方式，需要读取 D01 原文",
+              "原文读取工具不可用（TOOL_UNAVAILABLE，retryable=false），本轮无法取证"
+            ],
+            "citations": [],
+            "decision_summary": "检索仅命中 D01《报销期限》，摘要提示 30 天，但 read_document 两次均报工具不可用且不可重试，无法取得原文，故不作结论并说明失败原因。"
+          }
+        }
+      ],
+      "answer": "未能完成回答。检索到候选文档 D01《报销期限》（版本日期 2026-10-01，摘要显示\"报销期限 30 天\"），但原文读取工具连续两次返回 TOOL_UNAVAILABLE（不可重试），因此本轮无法取得原文，不能据此确认并引用具体期限规定。建议稍后重试或改由人工查阅该制度原文。",
+      "citations": [],
+      "gaps": [
+        "仅凭检索摘要不能确认报销期限的适用范围与起算方式，需要读取 D01 原文",
+        "原文读取工具不可用（TOOL_UNAVAILABLE，retryable=false），本轮无法取证"
+      ],
+      "validation_errors": []
+    }
+  ],
+  "boundaries": [
+    "六项业务本批检查通过，不是总体准确率或稳定性",
+    "四项LiveBoundaryTests本轮未重跑，原真实记录仍属词条前版本",
+    "用户个人复核与用时仍未确认",
+    "无独立网络抓包或人工语义签署"
+  ]
+}

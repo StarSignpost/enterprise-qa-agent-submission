@@ -1,0 +1,13 @@
+{
+  "record_kind": "github_repository_created",
+  "recorded_at": "2026-11-01T20:41:45.802457+08:00",
+  "executed_by": "AI under user instruction to complete submission",
+  "http_status": 201,
+  "full_name": "StarSignpost/enterprise-qa-agent-submission",
+  "html_url": "https://github.com/StarSignpost/enterprise-qa-agent-submission",
+  "private": true,
+  "default_branch": "main",
+  "credential_channel": "existing Git credential helper; memory only; not printed or saved",
+  "reviewer_login": null,
+  "reviewer_read_access": "pending user-supplied reviewer username"
+}

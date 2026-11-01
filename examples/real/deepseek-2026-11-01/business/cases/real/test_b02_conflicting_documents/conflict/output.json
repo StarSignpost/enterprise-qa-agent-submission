@@ -1,0 +1,41 @@
+{
+  "run_id": "75ecd523-b17f-4acb-8d1f-75a55aca245f",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "检索到两份同名为《报销期限》的文件，规定不一致，且原文均未说明适用范围或相互废止关系，无法确定以哪份为准：\\n- D01（版本日期 2026-10-01）：报销期限 30 天。\\n- D02（版本日期 2026-10-15）：报销期限 15 天。\\n\\n请确认：贵公司目前执行的是 30 天还是 15 天？或提供该制度的正式发布/废止通知，以便我按有效版本回答。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "version_date": "2026-10-01",
+      "quote": "报销期限 30 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "call_00_nNXcIZdaOCPN5N2X2obn6686"
+    },
+    {
+      "document_id": "D02",
+      "version_date": "2026-10-15",
+      "quote": "报销期限 15 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "call_00_sZonEHrcxloboIOKMw1P7609"
+    }
+  ],
+  "gaps": [
+    "D01 与 D02 对报销期限的规定分别为 30 天和 15 天，存在冲突",
+    "两份原文均未载明适用范围、生效或废止关系，无明确优先级依据",
+    "缺少正式发布/废止通知或效力说明"
+  ],
+  "status": "needs_clarification",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 3,
+  "api_calls": 5,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

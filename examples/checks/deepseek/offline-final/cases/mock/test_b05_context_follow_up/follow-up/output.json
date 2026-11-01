@@ -1,0 +1,31 @@
+{
+  "run_id": "77d64ccf-a948-47e1-aba5-f875dbb18f50",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "answer": "需提交发票和出差审批单。",
+  "citations": [
+    {
+      "document_id": "D03",
+      "version_date": "2026-10-01",
+      "quote": "差旅报销需提交发票和出差审批单。",
+      "start": 0,
+      "end": 16,
+      "read_call_id": "mock-2"
+    }
+  ],
+  "gaps": [],
+  "status": "completed",
+  "termination_source": "model",
+  "steps_used": 4,
+  "tool_calls": 2,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "supported",
+      "reason": "引用可支持候选结论",
+      "method": "same_model_review",
+      "mode": "mock"
+    }
+  }
+}

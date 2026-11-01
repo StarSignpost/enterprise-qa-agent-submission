@@ -1,0 +1,10 @@
+test_successful_read_exposes_trusted_handle_in_model_visible_body (tests.test_agent.AgentTests) ... ok
+test_citation_error_feedback_lists_only_successful_reads (tests.test_agent.AgentTests) ... ok
+test_x03_nonexistent_id_and_wrong_quote_cannot_complete (tests.test_acceptance.BoundaryAcceptanceTests) ... ok
+test_x04_failed_read_cannot_be_reported_as_success (tests.test_acceptance.BoundaryAcceptanceTests) ... ok
+test_x08_nonzero_offsets_and_subquotes_are_valid (tests.test_acceptance.BoundaryAcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.050s
+
+OK

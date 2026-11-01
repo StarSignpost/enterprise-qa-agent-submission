@@ -1,0 +1,26 @@
+{
+  "record_kind": "tool_test_result",
+  "mode": "tools_only",
+  "model_calls": 0,
+  "recorded_at": "2026-11-01T16:31:32.242933+08:00",
+  "python_version": "3.10.0",
+  "command": "python -m unittest discover -s tests -v",
+  "tests_run": 18,
+  "duration_seconds": 0.017,
+  "result": "OK",
+  "exit_code": 0,
+  "source_sha256": {
+    "src/tools.py": "56b0050728942ab68f74a5804bafdc94f991c4deb5a9746306dfe2e2384bae53",
+    "tests/test_tools.py": "7e11f8279b43dace7aa30afab8c0f4dba048ab26581e4c355feb4450b6a0550f",
+    "data/scenarios/ambiguous.json": "21fa686a21dd57addf8f686db6121fd037a445b082a4d872bf95929d18fcc2b9",
+    "data/scenarios/conflict.json": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+    "data/scenarios/no_match.json": "0c043a052c818909cf7a8bf34e696fdb5765016508a067c38c91c5f628f44c0e",
+    "data/scenarios/normal.json": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+    "data/scenarios/tool_error.json": "e2865f01cff2ee02107a1ec7d1104b3871c4ce57bc8ed9f7b66326ab1a05d566"
+  },
+  "limits": [
+    "No Agent loop or model adapter implemented",
+    "No real-model or Mock-model evaluation",
+    "Current environment only; no clean-environment reproduction"
+  ]
+}

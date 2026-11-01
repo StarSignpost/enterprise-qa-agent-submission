@@ -1,0 +1,31 @@
+{
+  "run_id": "fbbda07b-0f6e-447c-bf7f-115404318a6d",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "answer": "报销期限为 30 天。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "version_date": "2026-10-01",
+      "quote": "报销期限 30 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "mock-2"
+    }
+  ],
+  "gaps": [],
+  "status": "completed",
+  "termination_source": "model",
+  "steps_used": 4,
+  "tool_calls": 2,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "supported",
+      "reason": "引用可支持候选结论",
+      "method": "same_model_review",
+      "mode": "mock"
+    }
+  }
+}

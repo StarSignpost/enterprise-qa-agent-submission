@@ -1,0 +1,614 @@
+{
+  "record_kind": "final_real_evidence_index",
+  "checked_at": "2026-11-01T19:27:49.649188+08:00",
+  "stage_definitions": {
+    "S0": "句柄修复前",
+    "S1": "句柄修复后/同义词条前",
+    "S2": "最终词条后"
+  },
+  "stage_labels_are_git_commits": false,
+  "final_runtime_fingerprint": "18b383be619c98df9cb62d66de2aac488d272ca6b7d08bb91102eb48b8794326",
+  "final_runtime_source_sha256": {
+    "src/__init__.py": "26dda23055721ab2921774dcdcc244517b5566e25a83a4be7e08dda97e688d3d",
+    "src/agent.py": "2fe8479f3a9dc871b4510bf0cbfb754a60c1bb89969bc1b08f12dd275ec02856",
+    "src/cli.py": "c32bb595afa0a075206ed99f9ebd8e88ef49c3a2951c6e04c1f150248994bdb0",
+    "src/mock_model.py": "3867e703252584880d95f58a623179e2fedb99764ac3d0f2584fdc8fa1aa2af5",
+    "src/models.py": "c4a48db18046cb28db40361a81e53b8b548cad89af7c47215880181db9dbc1e4",
+    "src/prompts.py": "eb3310d75f9d9a690b9678079ed20adee8980e0a3eeec739859e11440475fd47",
+    "src/tools.py": "31073f1c9eb6b9d98d134fdfdbc9dd33ba915e8b730a78efcaba906b6a92cef1",
+    "src/validation.py": "243a826a7e0baaafb1d55af65b33622e742bd7793fd92496601c8c440cc5f93b"
+  },
+  "bundle_count": 17,
+  "api_requests_recorded": 83,
+  "rows": [
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/business/cases/real/test_b02_conflicting_documents/conflict",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销期限多久？",
+      "status": "needs_clarification",
+      "api_calls": 5,
+      "steps": 5,
+      "started_at": "2026-11-01T18:15:09.392290+08:00",
+      "finished_at": "2026-11-01T18:15:40.644909+08:00",
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "clarify"
+        }
+      ],
+      "final_citations": 2
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/business/cases/real/test_b03_outside_corpus_with_partial_keyword_hits/outside",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "公司是否报销宠物医疗费？",
+      "status": "incomplete",
+      "api_calls": 6,
+      "steps": 6,
+      "started_at": "2026-11-01T18:15:40.649456+08:00",
+      "finished_at": "2026-11-01T18:16:16.820324+08:00",
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "search_documents"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "read_document"
+        },
+        {
+          "step": 6,
+          "action": "stop"
+        }
+      ],
+      "final_citations": 2
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/business/cases/real/test_b04_paraphrase_preserves_facts_and_sources/original",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销期限多久？",
+      "status": "completed",
+      "api_calls": 4,
+      "steps": 4,
+      "started_at": "2026-11-01T18:16:16.823385+08:00",
+      "finished_at": "2026-11-01T18:16:40.058552+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 2,
+          "action": "read_document"
+        },
+        {
+          "step": 3,
+          "action": "answer"
+        },
+        {
+          "step": 4,
+          "action": "assess_answer"
+        }
+      ],
+      "final_citations": 1
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/business/cases/real/test_b04_paraphrase_preserves_facts_and_sources/paraphrase",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "费用报销最迟得在多少天内办？",
+      "status": "completed",
+      "api_calls": 4,
+      "steps": 4,
+      "started_at": "2026-11-01T18:16:40.062599+08:00",
+      "finished_at": "2026-11-01T18:17:03.469246+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 2,
+          "action": "read_document"
+        },
+        {
+          "step": 3,
+          "action": "answer"
+        },
+        {
+          "step": 4,
+          "action": "assess_answer"
+        }
+      ],
+      "final_citations": 1
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/business/cases/real/test_b05_context_follow_up/first",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "差旅报销期限多久？",
+      "status": "incomplete",
+      "api_calls": 6,
+      "steps": 6,
+      "started_at": "2026-11-01T18:17:03.472310+08:00",
+      "finished_at": "2026-11-01T18:17:41.047407+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "answer"
+        },
+        {
+          "step": 6,
+          "action": "stop"
+        }
+      ],
+      "final_citations": 2
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/business/cases/real/test_b06_tool_failure_has_explicit_cause/failure",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销期限多久？",
+      "status": "failed",
+      "api_calls": 5,
+      "steps": 5,
+      "started_at": "2026-11-01T18:17:41.051970+08:00",
+      "finished_at": "2026-11-01T18:18:11.013059+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 2,
+          "action": "read_document"
+        },
+        {
+          "step": 3,
+          "action": "search_documents"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "stop"
+        }
+      ],
+      "final_citations": 0
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/follow-up-fixed/cases/real/test_b05_context_follow_up/first",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "差旅报销期限多久？",
+      "status": "needs_clarification",
+      "api_calls": 7,
+      "steps": 7,
+      "started_at": "2026-11-01T18:22:33.218315+08:00",
+      "finished_at": "2026-11-01T18:23:17.015728+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "answer"
+        },
+        {
+          "step": 6,
+          "action": "assess_answer"
+        },
+        {
+          "step": 7,
+          "action": "clarify"
+        }
+      ],
+      "final_citations": 2
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/follow-up-fixed/cases/real/test_b05_context_follow_up/follow-up",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "那需要什么材料？",
+      "status": "completed",
+      "api_calls": 5,
+      "steps": 5,
+      "started_at": "2026-11-01T18:23:17.020362+08:00",
+      "finished_at": "2026-11-01T18:23:46.097289+08:00",
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "answer"
+        },
+        {
+          "step": 5,
+          "action": "assess_answer"
+        }
+      ],
+      "final_citations": 1
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/follow-up-fixed/cases/real/test_conflict_content_change/same-deadline",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销期限多久？",
+      "status": "completed",
+      "api_calls": 7,
+      "steps": 7,
+      "started_at": "2026-11-01T18:23:46.101904+08:00",
+      "finished_at": "2026-11-01T18:24:27.275931+08:00",
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "read_document"
+        },
+        {
+          "step": 6,
+          "action": "answer"
+        },
+        {
+          "step": 7,
+          "action": "assess_answer"
+        }
+      ],
+      "final_citations": 2
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/follow-up-fixed/cases/real/test_execution_limit/limit",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销期限多久？",
+      "status": "incomplete",
+      "api_calls": 1,
+      "steps": 1,
+      "started_at": "2026-11-01T18:24:27.280477+08:00",
+      "finished_at": "2026-11-01T18:24:32.996084+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        }
+      ],
+      "final_citations": 0
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/follow-up-fixed/cases/real/test_no_related_documents/no-match",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销期限多久？",
+      "status": "incomplete",
+      "api_calls": 5,
+      "steps": 5,
+      "started_at": "2026-11-01T18:24:33.000659+08:00",
+      "finished_at": "2026-11-01T18:25:02.343006+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "search_documents"
+        },
+        {
+          "step": 4,
+          "action": "search_documents"
+        },
+        {
+          "step": 5,
+          "action": "stop"
+        }
+      ],
+      "final_citations": 0
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/follow-up-fixed/cases/real/test_underspecified_question/ambiguous",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "多久？",
+      "status": "needs_clarification",
+      "api_calls": 1,
+      "steps": 1,
+      "started_at": "2026-11-01T18:25:02.347670+08:00",
+      "finished_at": "2026-11-01T18:25:09.196931+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "clarify"
+        }
+      ],
+      "final_citations": 0
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/normal-fixed/cases/real/test_b01_clear_answer/normal",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销期限多久？",
+      "status": "completed",
+      "api_calls": 4,
+      "steps": 4,
+      "started_at": "2026-11-01T18:13:08.330212+08:00",
+      "finished_at": "2026-11-01T18:13:31.902201+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 2,
+          "action": "read_document"
+        },
+        {
+          "step": 3,
+          "action": "answer"
+        },
+        {
+          "step": 4,
+          "action": "assess_answer"
+        }
+      ],
+      "final_citations": 1
+    },
+    {
+      "evidence": "examples/real/deepseek-2026-11-01/smoke/cases/real/test_b01_clear_answer/normal",
+      "stage": "S0",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/agent.py",
+        "src/prompts.py",
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "26cdacc6f0d59b86a7f1ed921ce45950cb968c9737265a939ab7eefeef8f5113",
+      "question": "报销期限多久？",
+      "status": "failed",
+      "api_calls": 7,
+      "steps": 7,
+      "started_at": "2026-11-01T18:10:33.359172+08:00",
+      "finished_at": "2026-11-01T18:11:16.996373+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "answer"
+        },
+        {
+          "step": 6,
+          "action": "answer"
+        },
+        {
+          "step": 7,
+          "action": "stop"
+        }
+      ],
+      "final_citations": 0
+    },
+    {
+      "evidence": "examples/improvements/synonym-001/A0-before/cases/real/test_conflict_with_synonym_question/conflict",
+      "stage": "S1",
+      "matches_final_runtime": false,
+      "runtime_mismatches": [
+        "src/tools.py"
+      ],
+      "runtime_fingerprint": "089dea339a62c41a8fd980c9a837f682740f87be68490be1d735e81dcfa4bc7a",
+      "question": "报销时效有多久？",
+      "status": "needs_clarification",
+      "api_calls": 5,
+      "steps": 5,
+      "started_at": "2026-11-01T18:53:52.459508+08:00",
+      "finished_at": "2026-11-01T18:54:24.106184+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "clarify"
+        }
+      ],
+      "final_citations": 2
+    },
+    {
+      "evidence": "examples/improvements/synonym-001/after-real/cases/real/test_agreement_with_synonym_question/agreement",
+      "stage": "S2",
+      "matches_final_runtime": true,
+      "runtime_mismatches": [],
+      "runtime_fingerprint": "18b383be619c98df9cb62d66de2aac488d272ca6b7d08bb91102eb48b8794326",
+      "question": "报销时效有多久？",
+      "status": "completed",
+      "api_calls": 6,
+      "steps": 6,
+      "started_at": "2026-11-01T18:55:56.516525+08:00",
+      "finished_at": "2026-11-01T18:56:34.342550+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "answer"
+        },
+        {
+          "step": 6,
+          "action": "assess_answer"
+        }
+      ],
+      "final_citations": 2
+    },
+    {
+      "evidence": "examples/improvements/synonym-001/after-real/cases/real/test_conflict_with_synonym_question/conflict",
+      "stage": "S2",
+      "matches_final_runtime": true,
+      "runtime_mismatches": [],
+      "runtime_fingerprint": "18b383be619c98df9cb62d66de2aac488d272ca6b7d08bb91102eb48b8794326",
+      "question": "报销时效有多久？",
+      "status": "needs_clarification",
+      "api_calls": 5,
+      "steps": 5,
+      "started_at": "2026-11-01T18:56:34.350000+08:00",
+      "finished_at": "2026-11-01T18:57:05.425874+08:00",
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents"
+        },
+        {
+          "step": 3,
+          "action": "read_document"
+        },
+        {
+          "step": 4,
+          "action": "read_document"
+        },
+        {
+          "step": 5,
+          "action": "clarify"
+        }
+      ],
+      "final_citations": 2
+    }
+  ],
+  "interpretation": "跨版本且含失败的请求/证据计数，不是成功率；旧样本不得自动算作最终源码已验收。"
+}

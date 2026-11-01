@@ -1,0 +1,6 @@
+test_b01_clear_answer (tests.test_live.LiveAcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 23.577s
+
+OK

@@ -1,0 +1,2 @@
+{"event": "run_started", "run_id": "716df6a0-ae76-47f0-9821-d12d0888338e", "mode": "real", "model": null, "time": "2026-11-01T16:54:20.897220+08:00", "max_steps": 8, "initialization_failed": true}
+{"event": "run_finished", "run_id": "716df6a0-ae76-47f0-9821-d12d0888338e", "mode": "real", "model": null, "time": "2026-11-01T16:54:20.897220+08:00", "status": "failed", "termination_source": "initialization", "error_code": "MISSING_MODEL_CONFIG", "steps_used": 0, "tool_calls": 0, "api_calls": 0}

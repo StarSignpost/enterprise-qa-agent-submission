@@ -1,0 +1,31 @@
+{
+  "run_id": "911cd0f2-d45a-4293-bea3-19d747973a1d",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "按《报销期限》制度，报销期限为 30 天。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "end": 10,
+      "quote": "报销期限 30 天。",
+      "read_call_id": "call_00_K3VcAW6T04iYDi8piDdb4540",
+      "start": 0,
+      "version_date": "2026-10-01"
+    }
+  ],
+  "gaps": [],
+  "status": "completed",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 2,
+  "api_calls": 5,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "supported",
+      "reason": "引用原文“报销期限 30 天。”直接支持回答，且检索到的一致候选无冲突，未过度推广适用范围。",
+      "method": "same_model_review",
+      "mode": "real"
+    }
+  }
+}

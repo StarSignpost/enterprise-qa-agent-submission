@@ -1,0 +1,26 @@
+{
+  "mode": "mock",
+  "description": "Scripted offline test actions; not real model decisions",
+  "actions": [
+    {
+      "name": "search_documents",
+      "arguments": {
+        "query": "宠物医疗费报销",
+        "limit": 5,
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    },
+    {
+      "name": "stop",
+      "arguments": {
+        "answer": "未取得足够资料，无法完成。",
+        "citations": [],
+        "gaps": [
+          "需要相关制度或恢复原文读取"
+        ],
+        "status": "incomplete",
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    }
+  ]
+}

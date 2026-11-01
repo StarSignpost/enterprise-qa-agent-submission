@@ -1,0 +1,23 @@
+test_conflicting_documents_both_remain_visible (test_tools.ToolTests) ... ok
+test_dataset_changes_and_filename_do_not_select_answers (test_tools.ToolTests) ... ok
+test_fault_comes_from_config_not_filename (test_tools.ToolTests) ... ok
+test_invalid_dataset_is_not_an_empty_index (test_tools.ToolTests) ... ok
+test_limit_exposes_truncation_instead_of_hiding_other_match (test_tools.ToolTests) ... ok
+test_material_synonym_retrieves_document (test_tools.ToolTests) ... ok
+test_normal_search_metadata_and_verbatim_read (test_tools.ToolTests) ... ok
+test_read_continuation_reconstructs_original (test_tools.ToolTests) ... ok
+test_read_fault_is_persistent_explicit_and_search_still_works (test_tools.ToolTests) ... ok
+test_read_rejects_missing_ids_and_invalid_ranges (test_tools.ToolTests) ... ok
+test_scenarios_do_not_leak_documents_between_instances (test_tools.ToolTests) ... ok
+test_search_fault_is_not_zero_matches (test_tools.ToolTests) ... ok
+test_search_rejects_invalid_arguments (test_tools.ToolTests) ... ok
+test_snapshot_copies_input_and_rejects_action_fault_config (test_tools.ToolTests) ... ok
+test_synonym_queries_retrieve_same_evidence (test_tools.ToolTests) ... ok
+test_underspecified_query_does_not_invent_a_topic_or_action (test_tools.ToolTests) ... ok
+test_unicode_slice_is_exact_and_search_does_not_normalize_source (test_tools.ToolTests) ... ok
+test_unrelated_corpus_is_successful_zero_match (test_tools.ToolTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.017s
+
+OK

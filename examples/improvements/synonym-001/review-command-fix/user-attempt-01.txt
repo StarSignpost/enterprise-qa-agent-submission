@@ -1,0 +1,17 @@
+PS %USERPROFILE%> python -m unittest tests.test_tools -v
+test_tools (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_tools (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_tools
+Traceback (most recent call last):
+  File "%USERPROFILE%\AppData\Local\Programs\Python\Python310\lib\unittest\loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'tests.test_tools'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+PS %USERPROFILE%>

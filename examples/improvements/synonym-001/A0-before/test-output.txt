@@ -1,0 +1,6 @@
+test_conflict_with_synonym_question (tests.test_live.LiveSynonymTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 31.653s
+
+OK

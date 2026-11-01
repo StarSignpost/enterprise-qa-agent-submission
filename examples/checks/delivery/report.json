@@ -1,0 +1,239 @@
+{
+  "record_kind": "final_documentation_and_delivery_audit",
+  "checked_at": "2026-11-01T21:01:52.818854+08:00",
+  "executed_by": "AI",
+  "outcome": "pre_commit_file_and_evidence_checks_passed",
+  "scope": "提交收尾：最终六业务真实复测、公开仓库、文档/证据更新与Git准备；src/tests/data/依赖未改。",
+  "canonical_documents": [
+    "README.md",
+    "docs/01-requirements.md",
+    "docs/02-solution.md",
+    "docs/03-evaluation.md",
+    "docs/04-ai-usage.md",
+    "docs/05-retrospective.md"
+  ],
+  "canonical_files_hashed": 42,
+  "source_test_data_match_saved_offline_report": true,
+  "saved_offline_counts": {
+    "passed": 70,
+    "failed": 0,
+    "error": 0,
+    "not_run": 12
+  },
+  "saved_offline_report": "examples/improvements/synonym-001/offline/test-report.json",
+  "full_suite_rerun_this_turn": false,
+  "python_ast_files_checked": 17,
+  "third_party_imports_detected": [],
+  "requirements_has_packages": false,
+  "env_example_key_is_empty": true,
+  "env_example_model": "deepseek-flash",
+  "scenario_files": [
+    {
+      "file": "data/scenarios/ambiguous.json",
+      "sha256": "21fa686a21dd57addf8f686db6121fd037a445b082a4d872bf95929d18fcc2b9",
+      "documents": 2,
+      "faults": {}
+    },
+    {
+      "file": "data/scenarios/conflict.json",
+      "sha256": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+      "documents": 2,
+      "faults": {}
+    },
+    {
+      "file": "data/scenarios/no_match.json",
+      "sha256": "0c043a052c818909cf7a8bf34e696fdb5765016508a067c38c91c5f628f44c0e",
+      "documents": 1,
+      "faults": {}
+    },
+    {
+      "file": "data/scenarios/normal.json",
+      "sha256": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+      "documents": 2,
+      "faults": {}
+    },
+    {
+      "file": "data/scenarios/tool_error.json",
+      "sha256": "e2865f01cff2ee02107a1ec7d1104b3871c4ce57bc8ed9f7b66326ab1a05d566",
+      "documents": 1,
+      "faults": {
+        "read_document": true
+      }
+    }
+  ],
+  "real_evidence": {
+    "bundles_checked": 25,
+    "requests_recorded": 124,
+    "stage_bundle_counts": {
+      "S0": 1,
+      "S1": 14,
+      "S2": 10
+    },
+    "matches_final_runtime": 10,
+    "final_citations_checked": 30,
+    "successful_reads_checked": 32,
+    "tool_results_feedback_checked": 66,
+    "guard_unobserved_recorded": 1,
+    "index": "evidence-index.json"
+  },
+  "actual_run_this_turn": "mock-command.json",
+  "real_api_calls_this_turn": 41,
+  "mock_result": "completed",
+  "historical_batch_times": [
+    {
+      "report": "examples/real/deepseek-2026-11-01/smoke/test-report.json",
+      "started_at": "2026-11-01T18:10:33.344868+08:00",
+      "finished_at": "2026-11-01T18:11:17.000923+08:00",
+      "wall_seconds": 43.656055,
+      "counts": {
+        "passed": 0,
+        "failed": 1,
+        "error": 0,
+        "not_run": 0
+      }
+    },
+    {
+      "report": "examples/real/deepseek-2026-11-01/normal-fixed/test-report.json",
+      "started_at": "2026-11-01T18:13:08.315858+08:00",
+      "finished_at": "2026-11-01T18:13:31.905322+08:00",
+      "wall_seconds": 23.589464,
+      "counts": {
+        "passed": 1,
+        "failed": 0,
+        "error": 0,
+        "not_run": 0
+      }
+    },
+    {
+      "report": "examples/real/deepseek-2026-11-01/business/test-report.json",
+      "started_at": "2026-11-01T18:15:09.381499+08:00",
+      "finished_at": "2026-11-01T18:18:11.017768+08:00",
+      "wall_seconds": 181.636269,
+      "counts": {
+        "passed": 4,
+        "failed": 1,
+        "error": 0,
+        "not_run": 0
+      }
+    },
+    {
+      "report": "examples/real/deepseek-2026-11-01/follow-up-fixed/test-report.json",
+      "started_at": "2026-11-01T18:22:33.201544+08:00",
+      "finished_at": "2026-11-01T18:25:09.201478+08:00",
+      "wall_seconds": 155.999934,
+      "counts": {
+        "passed": 5,
+        "failed": 0,
+        "error": 0,
+        "not_run": 0
+      }
+    },
+    {
+      "report": "examples/improvements/synonym-001/A0-before/test-report.json",
+      "started_at": "2026-11-01T18:53:52.432188+08:00",
+      "finished_at": "2026-11-01T18:54:24.111751+08:00",
+      "wall_seconds": 31.679563,
+      "counts": {
+        "passed": 1,
+        "failed": 0,
+        "error": 0,
+        "not_run": 0
+      }
+    },
+    {
+      "report": "examples/improvements/synonym-001/after-real/test-report.json",
+      "started_at": "2026-11-01T18:55:56.410280+08:00",
+      "finished_at": "2026-11-01T18:57:05.430450+08:00",
+      "wall_seconds": 69.02017,
+      "counts": {
+        "passed": 2,
+        "failed": 0,
+        "error": 0,
+        "not_run": 0
+      }
+    }
+  ],
+  "personal_total_work_time": "unknown; 不由批次墙钟时间推算",
+  "user_verification": {
+    "actual_reported": "一次模块加载失败；项目工具测试执行0项",
+    "corrected_rerun": "not_confirmed",
+    "manual_code_edits": "no_evidence_received",
+    "AI_drafted_reflection": "按用户要求代拟，不替代亲自编码/复核证明"
+  },
+  "repository": {
+    "git_rev_parse_exit_code": 0,
+    "git_repository_available": true,
+    "github_url": "https://github.com/StarSignpost/enterprise-qa-agent-submission",
+    "visibility": "public",
+    "unauthenticated_web_http_status": 200,
+    "reviewer_access": "public read verified",
+    "branch": "main",
+    "final_commit_sha": null,
+    "sha_note": "本报告是预提交核对；最终完整SHA由交付回复提供并在推送后核对main。"
+  },
+  "privacy": {
+    "raw_exam_files_not_copied": 1,
+    "raw_exam_asset_directories_not_copied": 1,
+    "ignore_patterns_present": true,
+    "private_env_not_in_manifest": true,
+    "text_scan": {
+      "checked_at": "2026-11-01T21:01:52.818854+08:00",
+      "files_checked": 1053,
+      "method": "long model/GitHub credential prefixes and unredacted Windows home paths; no matching content printed",
+      "credential_match_files": [],
+      "unredacted_user_directory_files": [],
+      "outcome": "passed"
+    }
+  },
+  "local_document_links": {
+    "checked": 142,
+    "broken": [],
+    "scope": [
+      "README.md",
+      "docs/01-requirements.md",
+      "docs/02-solution.md",
+      "docs/03-evaluation.md",
+      "docs/04-ai-usage.md",
+      "docs/05-retrospective.md",
+      "SUBMISSION.md",
+      "examples/real/final-six-2026-11-01/README.md",
+      "examples/checks/delivery/README.md",
+      "examples/checks/submission/README.md"
+    ],
+    "outcome": "passed"
+  },
+  "remaining_gaps": [
+    "四项真实边界在S2整批重跑",
+    "用户纠正后个人重跑和语义复核",
+    "独立人工语义检查/大样本/稳定性",
+    "干净环境/其他系统",
+    "个人总用时与会话外贡献"
+  ],
+  "json_parse_check": {
+    "invalid_files": [],
+    "outcome": "passed"
+  },
+  "user_writing_instruction": "用户要求AI直接代拟并以第一人称组织；事实执行者和未知工时仍按记录区分。",
+  "documentation_complete": true,
+  "final_document_hashes_match_manifest": true,
+  "final_runtime_changes_this_turn": [],
+  "final_test_changes_this_turn": [],
+  "document_paths_written": [
+    "README.md",
+    "docs/01-requirements.md",
+    "docs/02-solution.md",
+    "docs/03-evaluation.md",
+    "docs/04-ai-usage.md",
+    "docs/05-retrospective.md"
+  ],
+  "actual_real_run_this_turn": "examples/real/final-six-2026-11-01/test-report.json",
+  "full_suite_field_scope": "离线70项未重复；真实六业务已按实际报告执行。",
+  "final_business_counts": {
+    "passed": 6,
+    "failed": 0,
+    "error": 0,
+    "not_run": 0
+  },
+  "report_phase": "pre_commit",
+  "submission_prepared": true
+}

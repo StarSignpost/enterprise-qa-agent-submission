@@ -1,0 +1,13 @@
+{
+  "question": "那需要什么材料？",
+  "history": [
+    {
+      "role": "user",
+      "content": "差旅报销期限多久？"
+    },
+    {
+      "role": "assistant",
+      "content": "报销期限为 30 天。"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "record_kind": "tools_only_baseline",
+  "mode": "tools_only",
+  "stage": "proposal_before_user_choice",
+  "recorded_at": "2026-11-01T18:46:13.653322+08:00",
+  "python_version": "3.10.0",
+  "tool": "KnowledgeTools.search_documents",
+  "api_calls": 0,
+  "real_model_validation": "not_run",
+  "project_implementation_changed": false,
+  "source_sha256": {
+    "src/tools.py": "9a31a67fb57b6eb12aec461b5e1b13843439cdcffa19694e9170fec421f5ad6b",
+    "tests/test_tools.py": "473be1c55224d7b5b8451987ec1595a6031f1fecb853dbbe385a78e33932651c"
+  },
+  "observations": [
+    {
+      "scenario": "normal",
+      "input": {
+        "query": "报销时效有多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销时效有多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 2
+            },
+            {
+              "id": "D03",
+              "version_date": "2026-10-01",
+              "title": "差旅报销材料",
+              "summary": "差旅报销需提交发票和出差审批单。",
+              "score": 2
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/normal.json",
+      "data_sha256": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D03",
+            "title": "差旅报销材料",
+            "version_date": "2026-10-01",
+            "content": "差旅报销需提交发票和出差审批单。"
+          }
+        ],
+        "faults": {}
+      }
+    },
+    {
+      "scenario": "normal",
+      "input": {
+        "query": "报销期限多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销期限多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 6
+            },
+            {
+              "id": "D03",
+              "version_date": "2026-10-01",
+              "title": "差旅报销材料",
+              "summary": "差旅报销需提交发票和出差审批单。",
+              "score": 2
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/normal.json",
+      "data_sha256": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D03",
+            "title": "差旅报销材料",
+            "version_date": "2026-10-01",
+            "content": "差旅报销需提交发票和出差审批单。"
+          }
+        ],
+        "faults": {}
+      }
+    },
+    {
+      "scenario": "conflict",
+      "input": {
+        "query": "报销时效有多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销时效有多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 2
+            },
+            {
+              "id": "D02",
+              "version_date": "2026-10-15",
+              "title": "报销期限",
+              "summary": "报销期限 15 天。",
+              "score": 2
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/conflict.json",
+      "data_sha256": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D02",
+            "title": "报销期限",
+            "version_date": "2026-10-15",
+            "content": "报销期限 15 天。"
+          }
+        ],
+        "faults": {}
+      }
+    },
+    {
+      "scenario": "conflict",
+      "input": {
+        "query": "报销期限多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销期限多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 6
+            },
+            {
+              "id": "D02",
+              "version_date": "2026-10-15",
+              "title": "报销期限",
+              "summary": "报销期限 15 天。",
+              "score": 6
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/conflict.json",
+      "data_sha256": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D02",
+            "title": "报销期限",
+            "version_date": "2026-10-15",
+            "content": "报销期限 15 天。"
+          }
+        ],
+        "faults": {}
+      }
+    }
+  ],
+  "actual_finding": "normal场景：报销时效有多久？的D01/D03均2分；报销期限多久？的D01为6分、D03为2分。检索按(-score,id)排序，因此同义表达的并列靠ID打破。尚无该新问法的真实模型运行，不声称回答失败。",
+  "proposed_mapping": "报销时效 -> 报销期限（仅建议，尚未实施）",
+  "contribution": {
+    "proposal": "AI基于实际工具探测提出，用户尚未选择具体改进",
+    "user_request": "要求小范围改进、先选择实施者、亲自复核，并保存前后与反事实证据",
+    "user_manual_edits": "当前协作记录无本次改进的手工修改证据",
+    "ai_project_code_edits": "本次提案阶段无",
+    "executed_by_ai": "4次只读本地工具探测及本基线记录，无模型API调用",
+    "user_executed_or_reviewed": "尚未收到本次改进的实际运行或复核记录"
+  }
+}

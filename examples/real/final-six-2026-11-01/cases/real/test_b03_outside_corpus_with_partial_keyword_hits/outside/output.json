@@ -1,0 +1,40 @@
+{
+  "run_id": "d7f05662-c3eb-49aa-876f-bc5f347ecb42",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "资料不足，无法确认公司是否报销宠物医疗费。检索仅命中《报销期限》（D01）和《差旅报销材料》（D03）两份文档，均未涉及报销范围或宠物医疗费：D01 仅规定报销期限 30 天，D03 仅规定差旅报销需提交发票和出差审批单。现有制度资料中没有关于宠物医疗费是否属于报销范围的规定，故不能据此给出报销或不报销的结论。建议补充或指定适用的费用报销制度（含报销范围/不予报销项目清单）后再确认。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "version_date": "2026-10-01",
+      "quote": "报销期限 30 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "call_00_qrzWPkrr4KoGjLNOCKgp2256"
+    },
+    {
+      "document_id": "D03",
+      "version_date": "2026-10-01",
+      "quote": "差旅报销需提交发票和出差审批单。",
+      "start": 0,
+      "end": 16,
+      "read_call_id": "call_00_dQOXBDusNNIEAjom2sEb2295"
+    }
+  ],
+  "gaps": [
+    "缺少规定报销范围/不予报销项目的费用报销制度文档",
+    "两份候选文档均未涉及宠物医疗费，无任何可支持结论的条款"
+  ],
+  "status": "incomplete",
+  "termination_source": "model",
+  "steps_used": 6,
+  "tool_calls": 4,
+  "api_calls": 6,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

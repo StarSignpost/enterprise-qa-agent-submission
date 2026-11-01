@@ -1,0 +1,20 @@
+{
+  "run_id": "dc523a0c-ce66-4a6e-954b-f5d7cd32d8d5",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "未完成：决策额度已耗尽，尚未得到有效终态或完成证据复核",
+  "citations": [],
+  "gaps": [
+    "决策额度已耗尽，尚未得到有效终态或完成证据复核"
+  ],
+  "status": "incomplete",
+  "termination_source": "guard",
+  "error_code": "EXECUTION_LIMIT",
+  "steps_used": 1,
+  "tool_calls": 1,
+  "api_calls": 1,
+  "verification": {
+    "citation_integrity": "not_accepted",
+    "semantic_support": "not_accepted"
+  }
+}

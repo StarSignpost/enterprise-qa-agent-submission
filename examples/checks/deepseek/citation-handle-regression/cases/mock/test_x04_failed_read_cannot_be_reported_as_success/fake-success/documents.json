@@ -1,0 +1,13 @@
+{
+  "documents": [
+    {
+      "id": "D01",
+      "title": "报销期限",
+      "version_date": "2026-10-01",
+      "content": "报销期限 30 天。"
+    }
+  ],
+  "faults": {
+    "read_document": true
+  }
+}

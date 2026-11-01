@@ -1,0 +1,23 @@
+{
+  "run_id": "8905d05d-1be5-4175-9039-0841bc03b45d",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "未能完成回答。检索到候选文档 D01《报销期限》（版本日期 2026-10-01，摘要显示\"报销期限 30 天\"），但原文读取工具连续两次返回 TOOL_UNAVAILABLE（不可重试），因此本轮无法取得原文，不能据此确认并引用具体期限规定。建议稍后重试或改由人工查阅该制度原文。",
+  "citations": [],
+  "gaps": [
+    "仅凭检索摘要不能确认报销期限的适用范围与起算方式，需要读取 D01 原文",
+    "原文读取工具不可用（TOOL_UNAVAILABLE，retryable=false），本轮无法取证"
+  ],
+  "status": "failed",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 4,
+  "api_calls": 5,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "run_id": "8911bcc1-7c97-4d44-8451-8ea767a78876",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "未能完成回答：我已成功读取文档《报销期限》（D01，版本日期 2026-10-01），原文为\"报销期限 30 天。\"，可确认制度中报销期限为 30 天（未载明起算时点）。但提交引用时因缺少系统要求的读取动作标识（read_call_id）被校验拒绝，本轮无法附带合规引用，故不给出正式结论。请重试或在系统中重新发起查询。",
+  "citations": [],
+  "gaps": [
+    "无法获取成功读取动作的 read_call_id，导致合规引用无法提交",
+    "D01 原文未载明报销期限的起算时点（如费用发生日、发票开具日）"
+  ],
+  "status": "failed",
+  "termination_source": "model",
+  "steps_used": 7,
+  "tool_calls": 3,
+  "api_calls": 7,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

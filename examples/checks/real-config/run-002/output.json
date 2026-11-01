@@ -1,0 +1,20 @@
+{
+  "run_id": "716df6a0-ae76-47f0-9821-d12d0888338e",
+  "mode": "real",
+  "model": null,
+  "answer": "未完成：真实模式需要 OPENAI_API_KEY 和 OPENAI_MODEL；未切换 Mock",
+  "citations": [],
+  "gaps": [
+    "真实模式需要 OPENAI_API_KEY 和 OPENAI_MODEL；未切换 Mock"
+  ],
+  "status": "failed",
+  "termination_source": "initialization",
+  "error_code": "MISSING_MODEL_CONFIG",
+  "steps_used": 0,
+  "tool_calls": 0,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "not_accepted",
+    "semantic_support": "not_accepted"
+  }
+}

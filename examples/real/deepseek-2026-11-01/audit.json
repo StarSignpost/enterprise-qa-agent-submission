@@ -1,0 +1,34 @@
+{
+  "record_kind": "saved_real_evidence_audit",
+  "checked_at": "2026-11-01T18:27:08.624168+08:00",
+  "outcome": "passed",
+  "case_bundles_checked": 14,
+  "required_files_per_case": 5,
+  "successful_read_handles_checked": 16,
+  "final_citations_checked": 14,
+  "tool_results_followed_by_model_request": 34,
+  "checks": [
+    "文件存在、真实模式/模型/端点/日期/命令一致",
+    "状态和调用计数一致且不超限",
+    "ID/版本/Unicode原文片段/本轮成功读取句柄",
+    "完成结果有引用且语义支持复核通过",
+    "工具结果在后续model_request观察ID中，触顶未再次观察则如实记录",
+    "资料变更对照仅改变D02正文，问题/历史/额度相同"
+  ],
+  "scope_limit": "该审计检查保存证据及代码关联，不是独立网络抓包，也不证明语义全面正确。",
+  "runtime_source_hashes": "smoke为修复前源码；其余13包与当前src源码哈希一致。测试文件在上下文断言修正前后不同，逐批test-report保留当时哈希。",
+  "secret_scan": {
+    "status": "passed",
+    "exact_credential_matches": 0,
+    "text_files_checked": 807,
+    "checked_at": "2026-11-01T18:32:42.015762+08:00",
+    "method": "compare exact temporary credential in memory; credential not saved",
+    "scope": "src/tests/docs/examples/data and README/.env.example/requirements/.gitignore; excludes original exam and binary caches",
+    "in_memory_node_session": "reset after scan"
+  },
+  "local_document_links": {
+    "checked": 77,
+    "broken": [],
+    "outcome": "passed"
+  }
+}

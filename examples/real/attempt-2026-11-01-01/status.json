@@ -1,0 +1,82 @@
+{
+  "record_kind": "real_mode_initialization_attempt",
+  "mode": "real",
+  "date": "2026-11-01T17:35:58.966189+08:00",
+  "timezone": "Asia/Shanghai",
+  "model": null,
+  "status": "blocked_by_missing_configuration",
+  "actual_command": [
+    "python",
+    "-m",
+    "src.cli",
+    "--mode",
+    "real",
+    "--data",
+    "data/scenarios/normal.json",
+    "--input",
+    "examples/inputs/normal.json",
+    "--max-steps",
+    "8",
+    "--output-dir",
+    "examples/real/attempt-2026-11-01-01/normal"
+  ],
+  "actual_exit_code": 1,
+  "actual_error_code": "MISSING_MODEL_CONFIG",
+  "api_calls": 0,
+  "tool_calls": 0,
+  "model_driven_paths_observed": 0,
+  "paths_required": 2,
+  "normal_attempt_evidence": "normal/",
+  "environment_check": "environment-check.json",
+  "configuration": {
+    "max_steps": 8,
+    "data": "data/scenarios/normal.json",
+    "input": "examples/inputs/normal.json"
+  },
+  "criteria": [
+    {
+      "id": "B01",
+      "name": "明确答案",
+      "real_model_status": "not_run",
+      "gap": "No model request or model decision; shared initialization blocker"
+    },
+    {
+      "id": "B02",
+      "name": "文档冲突",
+      "real_model_status": "not_run",
+      "gap": "No model request or model decision; shared initialization blocker"
+    },
+    {
+      "id": "B03",
+      "name": "资料不足或资料外",
+      "real_model_status": "not_run",
+      "gap": "No model request or model decision; shared initialization blocker"
+    },
+    {
+      "id": "B04",
+      "name": "改写后的相似问题",
+      "real_model_status": "not_run",
+      "gap": "No model request or model decision; shared initialization blocker"
+    },
+    {
+      "id": "B05",
+      "name": "上下文追问",
+      "real_model_status": "not_run",
+      "gap": "No model request or model decision; shared initialization blocker"
+    },
+    {
+      "id": "B06",
+      "name": "工具失败",
+      "real_model_status": "not_run",
+      "gap": "No model request or model decision; shared initialization blocker"
+    }
+  ],
+  "additional_gaps": [
+    "真实模型循环未执行",
+    "至少两条不同工具结果驱动的路径未取得",
+    "真实引用语义与冲突处理未验证",
+    "网络、账号权限与额度未检测，因为尚未发出 API 请求"
+  ],
+  "mock_boundary": "Existing Mock records retained separately; none relabeled as real",
+  "next_input_needed": "Location/names of configured API environment or config file, plus model identifier; do not send the secret itself"
+}

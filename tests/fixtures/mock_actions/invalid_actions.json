@@ -1,0 +1,18 @@
+{
+  "mode": "mock",
+  "description": "Scripted offline test actions; not real model decisions",
+  "actions": [
+    {
+      "name": "invent_action",
+      "arguments": {
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    },
+    {
+      "name": "invent_action",
+      "arguments": {
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    }
+  ]
+}

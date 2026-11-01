@@ -1,0 +1,1 @@
+{"test_id": "tests.test_live.LiveAcceptanceTests.test_b01_clear_answer", "label": "normal", "mode": "real", "evidence": "cases/real/test_b01_clear_answer/normal", "actual_status": "failed", "exit_code": 1, "api_calls": 7}

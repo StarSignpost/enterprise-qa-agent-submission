@@ -1,0 +1,1189 @@
+{
+  "record_kind": "real_acceptance_summary",
+  "generated_at": "2026-11-01T18:27:08.624168+08:00",
+  "provider": "deepseek",
+  "model": "deepseek-flash",
+  "mode": "real",
+  "endpoint": "https://api.deepseek.com/responses",
+  "reasoning_effort": "none",
+  "python_version": "3.10.0",
+  "case_bundles": 14,
+  "api_requests_recorded": 67,
+  "includes_failed_runs": true,
+  "test_executions": 12,
+  "all_execution_counts": {
+    "passed": 10,
+    "failed": 2,
+    "error": 0,
+    "not_run": 0
+  },
+  "latest_unique_checks": [
+    {
+      "report": "normal-fixed/test-report.json",
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b01_clear_answer",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 23.578
+    },
+    {
+      "report": "business/test-report.json",
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b02_conflicting_documents",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 31.25
+    },
+    {
+      "report": "business/test-report.json",
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b03_outside_corpus_with_partial_keyword_hits",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 36.171
+    },
+    {
+      "report": "business/test-report.json",
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b04_paraphrase_preserves_facts_and_sources",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 46.657
+    },
+    {
+      "report": "follow-up-fixed/test-report.json",
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b05_context_follow_up",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 72.875
+    },
+    {
+      "report": "business/test-report.json",
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b06_tool_failure_has_explicit_cause",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 29.969
+    },
+    {
+      "report": "follow-up-fixed/test-report.json",
+      "test_id": "tests.test_live.LiveBoundaryTests.test_conflict_content_change",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 41.187
+    },
+    {
+      "report": "follow-up-fixed/test-report.json",
+      "test_id": "tests.test_live.LiveBoundaryTests.test_execution_limit",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 5.719
+    },
+    {
+      "report": "follow-up-fixed/test-report.json",
+      "test_id": "tests.test_live.LiveBoundaryTests.test_no_related_documents",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 29.344
+    },
+    {
+      "report": "follow-up-fixed/test-report.json",
+      "test_id": "tests.test_live.LiveBoundaryTests.test_underspecified_question",
+      "layer": "real_model",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 6.859
+    }
+  ],
+  "reports": [
+    {
+      "directory": "smoke",
+      "counts": {
+        "passed": 0,
+        "failed": 1,
+        "error": 0,
+        "not_run": 0
+      },
+      "tests_run": 1,
+      "started_at": "2026-11-01T18:10:33.344868+08:00",
+      "finished_at": "2026-11-01T18:11:17.000923+08:00"
+    },
+    {
+      "directory": "normal-fixed",
+      "counts": {
+        "passed": 1,
+        "failed": 0,
+        "error": 0,
+        "not_run": 0
+      },
+      "tests_run": 1,
+      "started_at": "2026-11-01T18:13:08.315858+08:00",
+      "finished_at": "2026-11-01T18:13:31.905322+08:00"
+    },
+    {
+      "directory": "business",
+      "counts": {
+        "passed": 4,
+        "failed": 1,
+        "error": 0,
+        "not_run": 0
+      },
+      "tests_run": 5,
+      "started_at": "2026-11-01T18:15:09.381499+08:00",
+      "finished_at": "2026-11-01T18:18:11.017768+08:00"
+    },
+    {
+      "directory": "follow-up-fixed",
+      "counts": {
+        "passed": 5,
+        "failed": 0,
+        "error": 0,
+        "not_run": 0
+      },
+      "tests_run": 5,
+      "started_at": "2026-11-01T18:22:33.201544+08:00",
+      "finished_at": "2026-11-01T18:25:09.201478+08:00"
+    }
+  ],
+  "cases": [
+    {
+      "evidence": "business/cases/real/test_b02_conflicting_documents/conflict",
+      "run_id": "75ecd523-b17f-4acb-8d1f-75a55aca245f",
+      "started_at": "2026-11-01T18:15:09.392290+08:00",
+      "finished_at": "2026-11-01T18:15:40.644909+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "75ecd523-b17f-4acb-8d1f-75a55aca245f",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "检索到两份同名为《报销期限》的文件，规定不一致，且原文均未说明适用范围或相互废止关系，无法确定以哪份为准：\\n- D01（版本日期 2026-10-01）：报销期限 30 天。\\n- D02（版本日期 2026-10-15）：报销期限 15 天。\\n\\n请确认：贵公司目前执行的是 30 天还是 15 天？或提供该制度的正式发布/废止通知，以便我按有效版本回答。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_nNXcIZdaOCPN5N2X2obn6686"
+          },
+          {
+            "document_id": "D02",
+            "version_date": "2026-10-15",
+            "quote": "报销期限 15 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_sZonEHrcxloboIOKMw1P7609"
+          }
+        ],
+        "gaps": [
+          "D01 与 D02 对报销期限的规定分别为 30 天和 15 天，存在冲突",
+          "两份原文均未载明适用范围、生效或废止关系，无明确优先级依据",
+          "缺少正式发布/废止通知或效力说明"
+        ],
+        "status": "needs_clarification",
+        "termination_source": "model",
+        "steps_used": 5,
+        "tool_calls": 3,
+        "api_calls": 5,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents",
+          "call_id": "call_00_ZC55iTAI95ihIjUsKNxm1317"
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "call_id": "call_00_nNXcIZdaOCPN5N2X2obn6686"
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "call_id": "call_00_sZonEHrcxloboIOKMw1P7609"
+        },
+        {
+          "step": 5,
+          "action": "clarify",
+          "call_id": "call_00_UMbe07f6FsR7cGLe0Jq49583"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 1,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "business/cases/real/test_b03_outside_corpus_with_partial_keyword_hits/outside",
+      "run_id": "4b6a94c7-e064-478f-97e1-66cfa0cdfa7d",
+      "started_at": "2026-11-01T18:15:40.649456+08:00",
+      "finished_at": "2026-11-01T18:16:16.820324+08:00",
+      "input": {
+        "question": "公司是否报销宠物医疗费？",
+        "history": []
+      },
+      "output": {
+        "run_id": "4b6a94c7-e064-478f-97e1-66cfa0cdfa7d",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "我无法确认公司是否报销宠物医疗费。知识库中仅检索到两份文档：D01《报销期限》（仅规定报销期限30天）和D03《差旅报销材料》（仅规定差旅报销需提交发票和出差审批单），两者均未涉及可报销费用的范围，也未提及宠物或宠物医疗费。因此现有资料不足以回答该问题，建议向财务或人事部门确认费用报销制度中关于\"可报销费用范围\"的具体规定。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_byfyv1HiSQzBC4FUuJrD7581"
+          },
+          {
+            "document_id": "D03",
+            "version_date": "2026-10-01",
+            "quote": "差旅报销需提交发票和出差审批单。",
+            "start": 0,
+            "end": 16,
+            "read_call_id": "call_00_VsxSNKERxuJs9zafMph29519"
+          }
+        ],
+        "gaps": [
+          "缺少规定可报销费用范围的报销制度文档（如费用报销管理办法、福利制度）",
+          "现有文档 D01、D03 仅涉及报销期限和差旅材料，未涵盖宠物医疗费是否为可报销项目",
+          "未检索到任何提及宠物或宠物医疗费的条款"
+        ],
+        "status": "incomplete",
+        "termination_source": "model",
+        "steps_used": 6,
+        "tool_calls": 4,
+        "api_calls": 6,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents",
+          "call_id": "call_00_T0EZqoyqLNLrUpRsqPEA5727"
+        },
+        {
+          "step": 3,
+          "action": "search_documents",
+          "call_id": "call_00_3mx6abeskzEsJ2ohKEw94749"
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "call_id": "call_00_byfyv1HiSQzBC4FUuJrD7581"
+        },
+        {
+          "step": 5,
+          "action": "read_document",
+          "call_id": "call_00_VsxSNKERxuJs9zafMph29519"
+        },
+        {
+          "step": 6,
+          "action": "stop",
+          "call_id": "call_00_r2GJrmDrayIaquy5Xav09359"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 1,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "business/cases/real/test_b04_paraphrase_preserves_facts_and_sources/original",
+      "run_id": "78f728bd-31d7-426b-a161-775eb33ee4af",
+      "started_at": "2026-11-01T18:16:16.823385+08:00",
+      "finished_at": "2026-11-01T18:16:40.058552+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "78f728bd-31d7-426b-a161-775eb33ee4af",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "根据《报销期限》制度，报销期限为 30 天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_dawaWHBrKj2dndjHBtDg8123"
+          }
+        ],
+        "gaps": [],
+        "status": "completed",
+        "termination_source": "model",
+        "steps_used": 4,
+        "tool_calls": 2,
+        "api_calls": 4,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "supported",
+            "reason": "D01 原文逐字写明“报销期限 30 天”，引用完整且直接支持回答，未发现矛盾候选。",
+            "method": "same_model_review",
+            "mode": "real"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_l3UOyRFB7yoDMaqfpWvD7098"
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "call_id": "call_00_dawaWHBrKj2dndjHBtDg8123"
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "call_id": "call_00_rM3VPHPP6wgw4EOzhX615393"
+        },
+        {
+          "step": 4,
+          "action": "assess_answer",
+          "call_id": "call_00_1MxM2FC24CdJPfClIgEk7492"
+        }
+      ],
+      "validation_errors": [],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "business/cases/real/test_b04_paraphrase_preserves_facts_and_sources/paraphrase",
+      "run_id": "2fed0f95-8e5c-4441-b571-150bfe220cf2",
+      "started_at": "2026-11-01T18:16:40.062599+08:00",
+      "finished_at": "2026-11-01T18:17:03.469246+08:00",
+      "input": {
+        "question": "费用报销最迟得在多少天内办？",
+        "history": []
+      },
+      "output": {
+        "run_id": "2fed0f95-8e5c-4441-b571-150bfe220cf2",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "根据《报销期限》，费用报销期限为 30 天。该文档原文仅写明“报销期限 30 天”，未说明起算日（如费用发生日、发票开具日）及是否含节假日，具体细节建议向财务确认。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_fxYv20cLMO6BAiW3y0yF4623"
+          }
+        ],
+        "gaps": [],
+        "status": "completed",
+        "termination_source": "model",
+        "steps_used": 4,
+        "tool_calls": 2,
+        "api_calls": 4,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "supported",
+            "reason": "D01 原文明确写明“报销期限 30 天”，引用逐字相符，回答已如实说明起算日等细节未载明，无过度推广或遗漏冲突。",
+            "method": "same_model_review",
+            "mode": "real"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_2RXcfM2plsXMhhy8smWO2825"
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "call_id": "call_00_fxYv20cLMO6BAiW3y0yF4623"
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "call_id": "call_00_YV45ghyUYkRkpQQtpG0U5101"
+        },
+        {
+          "step": 4,
+          "action": "assess_answer",
+          "call_id": "call_00_gtPtkd7bGXTwGLJgeha73420"
+        }
+      ],
+      "validation_errors": [],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "business/cases/real/test_b05_context_follow_up/first",
+      "run_id": "26d783eb-7f85-49a5-b0fe-db6947431072",
+      "started_at": "2026-11-01T18:17:03.472310+08:00",
+      "finished_at": "2026-11-01T18:17:41.047407+08:00",
+      "input": {
+        "question": "差旅报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "26d783eb-7f85-49a5-b0fe-db6947431072",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "未能完整确认差旅报销期限。《报销期限》文件（版本日期 2026-10-01）全文仅为“报销期限 30 天”，未说明该期限是否专用于差旅报销及起算时点；另一份《差旅报销材料》文件仅规定“差旅报销需提交发票和出差审批单”，未涉及期限。因此无法确认 30 天期限是否适用于差旅报销，建议向财务部门核实。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_GDczhgl2NG0UWTxaOSod0947"
+          },
+          {
+            "document_id": "D03",
+            "version_date": "2026-10-01",
+            "quote": "差旅报销需提交发票和出差审批单。",
+            "start": 0,
+            "end": 16,
+            "read_call_id": "call_00_Oe6dtKaZuDGZlw9YnCT45658"
+          }
+        ],
+        "gaps": [
+          "《报销期限》未明确 30 天期限是否专用于差旅报销",
+          "未规定期限起算时点"
+        ],
+        "status": "incomplete",
+        "termination_source": "model",
+        "steps_used": 6,
+        "tool_calls": 3,
+        "api_calls": 6,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_XVGDEEulLLzYT1kXy4BC0491"
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "call_id": "call_00_GDczhgl2NG0UWTxaOSod0947"
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "call_id": "call_00_Oe6dtKaZuDGZlw9YnCT45658"
+        },
+        {
+          "step": 5,
+          "action": "answer",
+          "call_id": "call_00_e5s29KscRq6giRXWC21L6410"
+        },
+        {
+          "step": 6,
+          "action": "stop",
+          "call_id": "call_00_pcdEazyh3YXjdtxPygxJ9371"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        },
+        {
+          "step": 5,
+          "code": "FINAL_OUTPUT_INVALID"
+        }
+      ],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "business/cases/real/test_b06_tool_failure_has_explicit_cause/failure",
+      "run_id": "929bdea9-4fa4-4368-afc0-333b71890d96",
+      "started_at": "2026-11-01T18:17:41.051970+08:00",
+      "finished_at": "2026-11-01T18:18:11.013059+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "929bdea9-4fa4-4368-afc0-333b71890d96",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "未能回答\"报销期限多久\"：检索到候选文档 D01《报销期限》（版本日期 2026-10-01，摘要显示\"报销期限 30 天\"），但原文读取工具持续故障（TOOL_UNAVAILABLE，不可重试），无法取得本轮原文，因此不能引用摘要内容作为制度依据。建议稍后重试或在系统中直接查阅该文档全文。",
+        "citations": [],
+        "gaps": [
+          "D01《报销期限》原文未能读取，摘要中的“30 天”未经原文核实",
+          "未确认该期限的起算点、适用范围及是否有其他相关制度"
+        ],
+        "status": "failed",
+        "termination_source": "model",
+        "steps_used": 5,
+        "tool_calls": 4,
+        "api_calls": 5,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_wmXT9j0Mtx0up4W9rCTD8063"
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "call_id": "call_00_Qp8Nxau8wmOuLBvquCmB7279"
+        },
+        {
+          "step": 3,
+          "action": "search_documents",
+          "call_id": "call_00_VE37Fga6jL9jFXvvSSoS9546"
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "call_id": "call_00_qEPUng0zk7tYhSNypin12645"
+        },
+        {
+          "step": 5,
+          "action": "stop",
+          "call_id": "call_00_8Z4UOlalMHJIS6iLX4zz4855"
+        }
+      ],
+      "validation_errors": [],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "follow-up-fixed/cases/real/test_b05_context_follow_up/first",
+      "run_id": "7d31fdd9-53d8-4bc9-896e-36869269cdd2",
+      "started_at": "2026-11-01T18:22:33.218315+08:00",
+      "finished_at": "2026-11-01T18:23:17.015728+08:00",
+      "input": {
+        "question": "差旅报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "7d31fdd9-53d8-4bc9-896e-36869269cdd2",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "本次检索只找到两份相关文档，均未明确差旅报销的期限规则：\n\n1. 《报销期限》（2026-10-01）全文仅一句「报销期限 30 天。」——标题为通用报销期限，未写明适用于差旅报销，也未说明起算日（自发票日期、出差结束日或费用发生日起算）及逾期处理。\n2. 《差旅报销材料》（2026-10-01）全文仅规定需提交发票和出差审批单，未提及期限或例外。\n\n因此无法确认“差旅报销期限”是否为上述 30 天及如何起算。请确认：差旅报销是否适用《报销期限》中的 30 天、以哪一日期起算，以及是否另有差旅专项规定（可提供文档名称或编号以便查找）。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_8ysaKD0lShwnKd6clEob0958"
+          },
+          {
+            "document_id": "D03",
+            "version_date": "2026-10-01",
+            "quote": "差旅报销需提交发票和出差审批单。",
+            "start": 0,
+            "end": 16,
+            "read_call_id": "call_00_AoMpSnm5HxImDuaTEPjQ3512"
+          }
+        ],
+        "gaps": [
+          "《报销期限》仅笼统规定30天，未明确是否适用于差旅报销，也未规定起算日与逾期处理",
+          "未检索到差旅专项报销期限条款，可能在制度命名或用词（如“费用报销时限”）不同"
+        ],
+        "status": "needs_clarification",
+        "termination_source": "model",
+        "steps_used": 7,
+        "tool_calls": 3,
+        "api_calls": 7,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_tY16jDInSasgS4XBotuw8822"
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "call_id": "call_00_8ysaKD0lShwnKd6clEob0958"
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "call_id": "call_00_AoMpSnm5HxImDuaTEPjQ3512"
+        },
+        {
+          "step": 5,
+          "action": "answer",
+          "call_id": "call_00_gSO4r75mYhE5Go0XVxb04136"
+        },
+        {
+          "step": 6,
+          "action": "assess_answer",
+          "call_id": "call_00_REwbUHYgltKSPBsVagwg2667"
+        },
+        {
+          "step": 7,
+          "action": "clarify",
+          "call_id": "call_00_pn2zmlWNjLARvsTdA8jz6306"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "follow-up-fixed/cases/real/test_b05_context_follow_up/follow-up",
+      "run_id": "3de8cf82-c5ff-4549-8d10-4d8890e9e102",
+      "started_at": "2026-11-01T18:23:17.020362+08:00",
+      "finished_at": "2026-11-01T18:23:46.097289+08:00",
+      "input": {
+        "question": "那需要什么材料？",
+        "history": [
+          {
+            "role": "user",
+            "content": "差旅报销期限多久？"
+          },
+          {
+            "role": "assistant",
+            "content": "本次检索只找到两份相关文档，均未明确差旅报销的期限规则：\n\n1. 《报销期限》（2026-10-01）全文仅一句「报销期限 30 天。」——标题为通用报销期限，未写明适用于差旅报销，也未说明起算日（自发票日期、出差结束日或费用发生日起算）及逾期处理。\n2. 《差旅报销材料》（2026-10-01）全文仅规定需提交发票和出差审批单，未提及期限或例外。\n\n因此无法确认“差旅报销期限”是否为上述 30 天及如何起算。请确认：差旅报销是否适用《报销期限》中的 30 天、以哪一日期起算，以及是否另有差旅专项规定（可提供文档名称或编号以便查找）。"
+          }
+        ]
+      },
+      "output": {
+        "run_id": "3de8cf82-c5ff-4549-8d10-4d8890e9e102",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "按《差旅报销材料》（2026-10-01）规定，差旅报销需提交两份材料：**发票** 和 **出差审批单**。该文档只有这一条规定，未涉及单据份数、发票类型、是否需要行程单/住宿明细等更细要求；如需这些细节，可提供更具体的制度文档以便核查。",
+        "citations": [
+          {
+            "document_id": "D03",
+            "version_date": "2026-10-01",
+            "quote": "差旅报销需提交发票和出差审批单。",
+            "start": 0,
+            "end": 16,
+            "read_call_id": "call_00_Sj6dH7G4Q1wyGg1mwVwB5575"
+          }
+        ],
+        "gaps": [],
+        "status": "completed",
+        "termination_source": "model",
+        "steps_used": 5,
+        "tool_calls": 2,
+        "api_calls": 5,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "supported",
+            "reason": "D03原文明确差旅报销需提交发票和出差审批单，引用片段的起止位置与文字相符，回答据此作答，并如实说明无更细要求，没有把期限等其他条款混作依据。",
+            "method": "same_model_review",
+            "mode": "real"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents",
+          "call_id": "call_00_4CE5xdAqUN4mF2vLgq0q4869"
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "call_id": "call_00_Sj6dH7G4Q1wyGg1mwVwB5575"
+        },
+        {
+          "step": 4,
+          "action": "answer",
+          "call_id": "call_00_cqnw0UGaWtqtawpS4EJ91225"
+        },
+        {
+          "step": 5,
+          "action": "assess_answer",
+          "call_id": "call_00_tzuacmeyhpUW0H2ArFJv4948"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 1,
+          "code": "UNKNOWN_ACTION"
+        }
+      ],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "follow-up-fixed/cases/real/test_conflict_content_change/same-deadline",
+      "run_id": "f716c83c-7151-4845-a8d7-105b732ec853",
+      "started_at": "2026-11-01T18:23:46.101904+08:00",
+      "finished_at": "2026-11-01T18:24:27.275931+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "f716c83c-7151-4845-a8d7-105b732ec853",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "根据制度文档，报销期限为 30 天。两份同名为《报销期限》的文档（版本日期 2026-10-01 与 2026-10-15）原文均为\"报销期限 30 天。\"，内容一致、无冲突。两份文档原文均未说明起算点（如费用发生日或发票日期）及适用报销类型，如需确认请告知具体场景。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_D2IQdDHrgx25R8TIEFst4823"
+          },
+          {
+            "document_id": "D02",
+            "version_date": "2026-10-15",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_LfT5POqmwU8l45QhtnWk4658"
+          }
+        ],
+        "gaps": [],
+        "status": "completed",
+        "termination_source": "model",
+        "steps_used": 7,
+        "tool_calls": 3,
+        "api_calls": 7,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "supported",
+            "reason": "两份文档原文均为\"报销期限 30 天。\"，引用位置与内容逐字相符，且回答已如实说明原文未载明起算点和适用范围。",
+            "method": "same_model_review",
+            "mode": "real"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 2,
+          "action": "search_documents",
+          "call_id": "call_00_7NZfg2lW80EfkSP012AU6245"
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "call_id": "call_00_D2IQdDHrgx25R8TIEFst4823"
+        },
+        {
+          "step": 5,
+          "action": "read_document",
+          "call_id": "call_00_LfT5POqmwU8l45QhtnWk4658"
+        },
+        {
+          "step": 6,
+          "action": "answer",
+          "call_id": "call_00_eErwDbEjakMd2nsOTiql8055"
+        },
+        {
+          "step": 7,
+          "action": "assess_answer",
+          "call_id": "call_00_dr40n5k30hulj72aNw8U3912"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 1,
+          "code": "UNKNOWN_ACTION"
+        },
+        {
+          "step": 3,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "follow-up-fixed/cases/real/test_execution_limit/limit",
+      "run_id": "dc523a0c-ce66-4a6e-954b-f5d7cd32d8d5",
+      "started_at": "2026-11-01T18:24:27.280477+08:00",
+      "finished_at": "2026-11-01T18:24:32.996084+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "dc523a0c-ce66-4a6e-954b-f5d7cd32d8d5",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "未完成：决策额度已耗尽，尚未得到有效终态或完成证据复核",
+        "citations": [],
+        "gaps": [
+          "决策额度已耗尽，尚未得到有效终态或完成证据复核"
+        ],
+        "status": "incomplete",
+        "termination_source": "guard",
+        "error_code": "EXECUTION_LIMIT",
+        "steps_used": 1,
+        "tool_calls": 1,
+        "api_calls": 1,
+        "verification": {
+          "citation_integrity": "not_accepted",
+          "semantic_support": "not_accepted"
+        }
+      },
+      "max_steps": 1,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_hiHcAEHVIyYv9hSnWhGk6939"
+        }
+      ],
+      "validation_errors": [],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "follow-up-fixed/cases/real/test_no_related_documents/no-match",
+      "run_id": "aa199f5a-e128-461b-b9b7-71ac96756b24",
+      "started_at": "2026-11-01T18:24:33.000659+08:00",
+      "finished_at": "2026-11-01T18:25:02.343006+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "aa199f5a-e128-461b-b9b7-71ac96756b24",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "未能在知识库中检索到与“报销期限”相关的制度文档：以“报销期限”“费用报销 时限”“报销”等关键词检索均返回 0 条结果。因此无法给出报销期限的准确规定，也不宜以常识推断。建议确认报销制度是否已入库，或改用制度正式名称（如《费用报销管理办法》）再查询。",
+        "citations": [],
+        "gaps": [
+          "知识库中未检索到任何与“报销”相关的制度文档，缺少报销期限的制度依据"
+        ],
+        "status": "incomplete",
+        "termination_source": "model",
+        "steps_used": 5,
+        "tool_calls": 3,
+        "api_calls": 5,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_t8VnV32I4xwemfUJMpaC9739"
+        },
+        {
+          "step": 3,
+          "action": "search_documents",
+          "call_id": "call_00_6eHSE8nBUA0Zb98JlRb15543"
+        },
+        {
+          "step": 4,
+          "action": "search_documents",
+          "call_id": "call_00_aQTkw54OMc60JGUSp2eR0657"
+        },
+        {
+          "step": 5,
+          "action": "stop",
+          "call_id": "call_00_AYn06KpNJPFIiQwEfekw2408"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "follow-up-fixed/cases/real/test_underspecified_question/ambiguous",
+      "run_id": "d8194600-beed-474a-b3c1-bb5a088a6eaf",
+      "started_at": "2026-11-01T18:25:02.347670+08:00",
+      "finished_at": "2026-11-01T18:25:09.196931+08:00",
+      "input": {
+        "question": "多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "d8194600-beed-474a-b3c1-bb5a088a6eaf",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "请问您指的是哪一项的时长？例如：请假/年假天数、报销审批时限、试用期长度、合同期限、培训周期等。不同制度口径不同，请补充具体事项（以及适用的部门/地区/员工类型，如适用），我再检索相应制度原文回答。",
+        "citations": [],
+        "gaps": [
+          "问题缺少具体事项对象（“多久”指哪类期限/时长）",
+          "未说明适用的部门、地区或员工类型，可能影响适用制度版本"
+        ],
+        "status": "needs_clarification",
+        "termination_source": "model",
+        "steps_used": 1,
+        "tool_calls": 0,
+        "api_calls": 1,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "clarify",
+          "call_id": "call_00_aimLFlobpltwyHjCBaRJ6780"
+        }
+      ],
+      "validation_errors": [],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "normal-fixed/cases/real/test_b01_clear_answer/normal",
+      "run_id": "d81e2769-48ec-44df-8a14-4e6c690ccb3f",
+      "started_at": "2026-11-01T18:13:08.330212+08:00",
+      "finished_at": "2026-11-01T18:13:31.902201+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "d81e2769-48ec-44df-8a14-4e6c690ccb3f",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "根据《报销期限》制度，报销期限为 30 天。该文档仅载明“报销期限 30 天”，未说明起算时间（如费用发生日或票据日期）及是否区分费用类型，如有需要可进一步确认。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_AFhzZETWw3oj1Mt2x8cQ3146"
+          }
+        ],
+        "gaps": [],
+        "status": "completed",
+        "termination_source": "model",
+        "steps_used": 4,
+        "tool_calls": 2,
+        "api_calls": 4,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "supported",
+            "reason": "引用原文“报销期限 30 天。”直接支持回答结论，且已如实说明文档未载明起算时间与费用类型区分。",
+            "method": "same_model_review",
+            "mode": "real"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_zLOyqLgNoMxNTi5rwpKm5797"
+        },
+        {
+          "step": 2,
+          "action": "read_document",
+          "call_id": "call_00_AFhzZETWw3oj1Mt2x8cQ3146"
+        },
+        {
+          "step": 3,
+          "action": "answer",
+          "call_id": "call_00_SUq3nPOPlK6hcHY0N4529467"
+        },
+        {
+          "step": 4,
+          "action": "assess_answer",
+          "call_id": "call_00_k0tZXhYgCCrJ4O1ULNFo5330"
+        }
+      ],
+      "validation_errors": [],
+      "runtime_matches_current": true,
+      "runtime_hash_mismatches": []
+    },
+    {
+      "evidence": "smoke/cases/real/test_b01_clear_answer/normal",
+      "run_id": "8911bcc1-7c97-4d44-8451-8ea767a78876",
+      "started_at": "2026-11-01T18:10:33.359172+08:00",
+      "finished_at": "2026-11-01T18:11:16.996373+08:00",
+      "input": {
+        "question": "报销期限多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "8911bcc1-7c97-4d44-8451-8ea767a78876",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "未能完成回答：我已成功读取文档《报销期限》（D01，版本日期 2026-10-01），原文为\"报销期限 30 天。\"，可确认制度中报销期限为 30 天（未载明起算时点）。但提交引用时因缺少系统要求的读取动作标识（read_call_id）被校验拒绝，本轮无法附带合规引用，故不给出正式结论。请重试或在系统中重新发起查询。",
+        "citations": [],
+        "gaps": [
+          "无法获取成功读取动作的 read_call_id，导致合规引用无法提交",
+          "D01 原文未载明报销期限的起算时点（如费用发生日、发票开具日）"
+        ],
+        "status": "failed",
+        "termination_source": "model",
+        "steps_used": 7,
+        "tool_calls": 3,
+        "api_calls": 7,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "max_steps": 8,
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "call_id": "call_00_xxPFg9LVb8RviZpy4oJe8666"
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "call_id": "call_00_mu2d4tiDzasIHZ0E1qBs9785"
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "call_id": "call_00_43FDhbQ7qCXdcZwl7dFa1141"
+        },
+        {
+          "step": 5,
+          "action": "answer",
+          "call_id": "call_00_9T32Qw1ksD1EpxRmBumf3309"
+        },
+        {
+          "step": 6,
+          "action": "answer",
+          "call_id": "call_00_M61jQXGBRue6XqAcRDus2064"
+        },
+        {
+          "step": 7,
+          "action": "stop",
+          "call_id": "call_00_T6BQsHPPjdYC03SFBuRF7151"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        },
+        {
+          "step": 5,
+          "code": "CITATION_INVALID"
+        },
+        {
+          "step": 6,
+          "code": "CITATION_INVALID"
+        }
+      ],
+      "runtime_matches_current": false,
+      "runtime_hash_mismatches": [
+        "src/agent.py",
+        "src/prompts.py"
+      ]
+    }
+  ],
+  "counterfactual": {
+    "changed_only": "D02.content: 报销期限 15 天。 -> 报销期限 30 天。",
+    "same_input_and_max_steps": true,
+    "before": "business/cases/real/test_b02_conflicting_documents/conflict",
+    "after": "follow-up-fixed/cases/real/test_conflict_content_change/same-deadline",
+    "before_status": "needs_clarification",
+    "after_status": "completed"
+  },
+  "not_verified": [
+    "干净环境复现",
+    "真实模型多次重复稳定性/大样本效果",
+    "独立人工语义评审",
+    "真实模型故意生成不存在ID或伪造片段的对抗运行（已有确定性离线拒绝测试）",
+    "最终GitHub仓库/完整SHA/评审权限",
+    "独立AI使用说明与最终复盘/用户实际用时"
+  ],
+  "ai_assistance": "适配、实现修正、测试、真实执行和本报告由AI辅助完成；用户定义验收、选择服务并提供临时认证。没有证据表明用户手工改码或亲自执行验证，不编造这些贡献。"
+}

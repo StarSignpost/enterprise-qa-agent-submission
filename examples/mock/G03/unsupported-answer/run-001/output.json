@@ -1,0 +1,22 @@
+{
+  "run_id": "7f77bc0d-835b-4a18-a258-a2e3ed834808",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "answer": "未取得足够资料，无法完成。",
+  "citations": [],
+  "gaps": [
+    "需要相关制度或恢复原文读取"
+  ],
+  "status": "incomplete",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 2,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

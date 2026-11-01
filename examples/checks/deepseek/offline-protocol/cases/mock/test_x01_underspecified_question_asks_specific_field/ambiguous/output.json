@@ -1,0 +1,22 @@
+{
+  "run_id": "be3d4fdb-adc8-4858-813f-b9b28ad98d72",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "answer": "请说明查询什么事项或制度？",
+  "citations": [],
+  "gaps": [
+    "缺少事项名称"
+  ],
+  "status": "needs_clarification",
+  "termination_source": "model",
+  "steps_used": 1,
+  "tool_calls": 0,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "basis": "docs/01-requirements.md",
+  "test_report": "test-report.json",
+  "counts": {
+    "passed": 66,
+    "failed": 0,
+    "error": 0,
+    "not_run": 6
+  },
+  "saved_complete_evidence_sets": 18,
+  "model_api_calls_in_saved_runs": 0,
+  "provider_network_blocked": true,
+  "runtime_source_unchanged_from_implementation_stage": true,
+  "criteria": "Facts, source integrity and status; not exact prose or a unique tool order. Semantic review quality still needs live/human evaluation.",
+  "entries": [
+    {
+      "requirement": "B01",
+      "title": "明确答案",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b01_clear_answer",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.015
+        }
+      ],
+      "real_model_results": [
+        {
+          "test_id": "tests.test_live.LiveAcceptanceTests.test_b01_clear_answer",
+          "layer": "real_model",
+          "outcome": "not_run",
+          "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+          "duration_seconds": 0.0
+        }
+      ],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b01_clear_answer",
+          "label": "normal",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b01_clear_answer/normal",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_run"
+    },
+    {
+      "requirement": "B02",
+      "title": "文档冲突",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b02_conflicting_documents",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.016
+        }
+      ],
+      "real_model_results": [
+        {
+          "test_id": "tests.test_live.LiveAcceptanceTests.test_b02_conflicting_documents",
+          "layer": "real_model",
+          "outcome": "not_run",
+          "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+          "duration_seconds": 0.0
+        }
+      ],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b02_conflicting_documents",
+          "label": "conflict",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b02_conflicting_documents/conflict",
+          "actual_status": "needs_clarification",
+          "exit_code": 0,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_run"
+    },
+    {
+      "requirement": "B03",
+      "title": "资料外问题（有部分关键词命中）",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b03_outside_corpus_with_partial_keyword_hits",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.016
+        }
+      ],
+      "real_model_results": [
+        {
+          "test_id": "tests.test_live.LiveAcceptanceTests.test_b03_outside_corpus_with_partial_keyword_hits",
+          "layer": "real_model",
+          "outcome": "not_run",
+          "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+          "duration_seconds": 0.0
+        }
+      ],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b03_outside_corpus_with_partial_keyword_hits",
+          "label": "outside",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b03_outside_corpus_with_partial_keyword_hits/outside",
+          "actual_status": "incomplete",
+          "exit_code": 2,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_run"
+    },
+    {
+      "requirement": "B04",
+      "title": "改写后的相似问题",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b04_paraphrase_preserves_facts_and_sources",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.015
+        }
+      ],
+      "real_model_results": [
+        {
+          "test_id": "tests.test_live.LiveAcceptanceTests.test_b04_paraphrase_preserves_facts_and_sources",
+          "layer": "real_model",
+          "outcome": "not_run",
+          "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+          "duration_seconds": 0.0
+        }
+      ],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b04_paraphrase_preserves_facts_and_sources",
+          "label": "original",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b04_paraphrase_preserves_facts_and_sources/original",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        },
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b04_paraphrase_preserves_facts_and_sources",
+          "label": "paraphrase",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b04_paraphrase_preserves_facts_and_sources/paraphrase",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_run"
+    },
+    {
+      "requirement": "B05",
+      "title": "上下文追问",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b05_context_follow_up",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.031
+        }
+      ],
+      "real_model_results": [
+        {
+          "test_id": "tests.test_live.LiveAcceptanceTests.test_b05_context_follow_up",
+          "layer": "real_model",
+          "outcome": "not_run",
+          "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+          "duration_seconds": 0.0
+        }
+      ],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b05_context_follow_up",
+          "label": "first",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b05_context_follow_up/first",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        },
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b05_context_follow_up",
+          "label": "follow-up",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b05_context_follow_up/follow-up",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_run"
+    },
+    {
+      "requirement": "B06",
+      "title": "工具失败及明确原因",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b06_tool_failure_has_explicit_cause",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.0
+        }
+      ],
+      "real_model_results": [
+        {
+          "test_id": "tests.test_live.LiveAcceptanceTests.test_b06_tool_failure_has_explicit_cause",
+          "layer": "real_model",
+          "outcome": "not_run",
+          "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+          "duration_seconds": 0.0
+        }
+      ],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b06_tool_failure_has_explicit_cause",
+          "label": "failure",
+          "mode": "mock",
+          "evidence": "cases/mock/test_b06_tool_failure_has_explicit_cause/failure",
+          "actual_status": "failed",
+          "exit_code": 1,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_run"
+    },
+    {
+      "requirement": "X01",
+      "title": "问题不足时提出具体澄清项",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x01_underspecified_question_asks_specific_field",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.015
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x01_underspecified_question_asks_specific_field",
+          "label": "ambiguous",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x01_underspecified_question_asks_specific_field/ambiguous",
+          "actual_status": "needs_clarification",
+          "exit_code": 0,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X02",
+      "title": "调用上限与未完成状态",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x02_execution_limit_is_explicitly_incomplete",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.016
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x02_execution_limit_is_explicitly_incomplete",
+          "label": "limit",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x02_execution_limit_is_explicitly_incomplete/limit",
+          "actual_status": "incomplete",
+          "exit_code": 2,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X03",
+      "title": "未知引用及错误片段拒绝",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x03_nonexistent_id_and_wrong_quote_cannot_complete",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.016
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x03_nonexistent_id_and_wrong_quote_cannot_complete",
+          "label": "unknown-id",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x03_nonexistent_id_and_wrong_quote_cannot_complete/unknown-id",
+          "actual_status": "incomplete",
+          "exit_code": 2,
+          "api_calls": 0
+        },
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x03_nonexistent_id_and_wrong_quote_cannot_complete",
+          "label": "wrong-quote",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x03_nonexistent_id_and_wrong_quote_cannot_complete/wrong-quote",
+          "actual_status": "incomplete",
+          "exit_code": 2,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X04",
+      "title": "失败读取后不能伪报完成",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x04_failed_read_cannot_be_reported_as_success",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.015
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x04_failed_read_cannot_be_reported_as_success",
+          "label": "fake-success",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x04_failed_read_cannot_be_reported_as_success/fake-success",
+          "actual_status": "failed",
+          "exit_code": 1,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X05",
+      "title": "引用存在与语义支持分开",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x05_existing_quote_does_not_prove_support",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.016
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x05_existing_quote_does_not_prove_support",
+          "label": "unsupported",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x05_existing_quote_does_not_prove_support/unsupported",
+          "actual_status": "incomplete",
+          "exit_code": 2,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X06",
+      "title": "不同措辞及合法工具顺序",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x06_different_wording_and_valid_action_order_are_accepted",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.031
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x06_different_wording_and_valid_action_order_are_accepted",
+          "label": "standard",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x06_different_wording_and_valid_action_order_are_accepted/standard",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        },
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x06_different_wording_and_valid_action_order_are_accepted",
+          "label": "other-order",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x06_different_wording_and_valid_action_order_are_accepted/other-order",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X07",
+      "title": "不能引用未读取的正文尾部",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x07_partial_read_cannot_cite_unread_source_text",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.016
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x07_partial_read_cannot_cite_unread_source_text",
+          "label": "unread-tail",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x07_partial_read_cannot_cite_unread_source_text/unread-tail",
+          "actual_status": "incomplete",
+          "exit_code": 2,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X08",
+      "title": "非零位置及连续子片段",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x08_nonzero_offsets_and_subquotes_are_valid",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.0
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x08_nonzero_offsets_and_subquotes_are_valid",
+          "label": "offset",
+          "mode": "mock",
+          "evidence": "cases/mock/test_x08_nonzero_offsets_and_subquotes_are_valid/offset",
+          "actual_status": "completed",
+          "exit_code": 0,
+          "api_calls": 0
+        }
+      ],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X09",
+      "title": "工具恢复须来自新模型动作",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x09_read_failure_can_recover_only_after_new_model_action",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.0
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X10",
+      "title": "无动作响应仍受上限约束",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x10_empty_model_responses_cannot_loop_forever",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.0
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [],
+      "real_model_semantic_quality": "not_claimed"
+    },
+    {
+      "requirement": "X11",
+      "title": "重复调用ID不能覆盖证据",
+      "offline_results": [
+        {
+          "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x11_duplicate_call_id_does_not_overwrite_evidence",
+          "layer": "offline",
+          "outcome": "passed",
+          "detail": null,
+          "duration_seconds": 0.0
+        }
+      ],
+      "real_model_results": [],
+      "evidence": [],
+      "real_model_semantic_quality": "not_claimed"
+    }
+  ]
+}

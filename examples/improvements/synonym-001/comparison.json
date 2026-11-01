@@ -1,0 +1,889 @@
+{
+  "record_kind": "synonym_improvement_actual_results",
+  "recorded_at": "2026-11-01T18:58:10.067692+08:00",
+  "mapping": "报销时效 -> 报销期限",
+  "mode": "real (three cases); tools_only and offline reports separate",
+  "question": "报销时效有多久？",
+  "cases": {
+    "A0": {
+      "evidence": "A0-before/cases/real/test_conflict_with_synonym_question/conflict",
+      "input": {
+        "question": "报销时效有多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "9ed953c6-7ee2-4456-8eee-b82b2204cce1",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "检索到两份同名《报销期限》制度，但规定不同，且原文均未写明适用范围或优先级，无法判断哪份应适用：\\n\\n- D01（版本日期 2026-10-01）：原文为「报销期限 30 天。」\\n- D02（版本日期 2026-10-15）：原文为「报销期限 15 天。」\\n\\n请确认：您所适用的报销制度是哪一份（或面向哪个主体/费用类型）？或是否已知两份制度的适用关系（如按费用类型、地区、发布主体区分）？确认后我再给出结论。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_C2giD21gdtNsYFnofUcY1049"
+          },
+          {
+            "document_id": "D02",
+            "version_date": "2026-10-15",
+            "quote": "报销期限 15 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_e9ELLnqHbbgJNHzKsbSB2507"
+          }
+        ],
+        "gaps": [
+          "两份同名制度对报销期限规定不一致（30 天 vs 15 天），原文未写明适用范围与优先级",
+          "缺少用户所适用主体/费用类型信息，无法确定应适用哪份制度"
+        ],
+        "status": "needs_clarification",
+        "termination_source": "model",
+        "steps_used": 5,
+        "tool_calls": 3,
+        "api_calls": 5,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "documents": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D02",
+            "title": "报销期限",
+            "version_date": "2026-10-15",
+            "content": "报销期限 15 天。"
+          }
+        ],
+        "faults": {}
+      },
+      "run": {
+        "run_id": "9ed953c6-7ee2-4456-8eee-b82b2204cce1",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "started_at": "2026-11-01T18:53:52.459508+08:00",
+        "finished_at": "2026-11-01T18:54:24.106184+08:00",
+        "command": [
+          "python",
+          "-m",
+          "src.cli",
+          "--mode",
+          "real",
+          "--data",
+          "E:\\temp2\\data\\scenarios\\conflict.json",
+          "--input",
+          "E:\\temp2\\examples\\improvements\\synonym-001\\A0-before\\cases\\real\\test_conflict_with_synonym_question\\conflict-input.json",
+          "--max-steps",
+          "8",
+          "--output-dir",
+          "E:\\temp2\\examples\\improvements\\synonym-001\\A0-before\\cases\\real\\test_conflict_with_synonym_question\\conflict"
+        ],
+        "python_version": "3.10.0",
+        "max_steps": 8,
+        "steps_used": 5,
+        "tool_calls": 3,
+        "api_calls": 5,
+        "status": "needs_clarification",
+        "termination_source": "model",
+        "provider": "deepseek",
+        "endpoint": "https://api.deepseek.com/responses",
+        "reasoning_effort": "none",
+        "data_sha256": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+        "source_sha256": {
+          "src/__init__.py": "26dda23055721ab2921774dcdcc244517b5566e25a83a4be7e08dda97e688d3d",
+          "src/agent.py": "2fe8479f3a9dc871b4510bf0cbfb754a60c1bb89969bc1b08f12dd275ec02856",
+          "src/cli.py": "c32bb595afa0a075206ed99f9ebd8e88ef49c3a2951c6e04c1f150248994bdb0",
+          "src/mock_model.py": "3867e703252584880d95f58a623179e2fedb99764ac3d0f2584fdc8fa1aa2af5",
+          "src/models.py": "c4a48db18046cb28db40361a81e53b8b548cad89af7c47215880181db9dbc1e4",
+          "src/prompts.py": "eb3310d75f9d9a690b9678079ed20adee8980e0a3eeec739859e11440475fd47",
+          "src/tools.py": "9a31a67fb57b6eb12aec461b5e1b13843439cdcffa19694e9170fec421f5ad6b",
+          "src/validation.py": "243a826a7e0baaafb1d55af65b33622e742bd7793fd92496601c8c440cc5f93b"
+        },
+        "mock_script_sha256": null
+      },
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销时效 期限",
+            "limit": 10,
+            "decision_summary": "检索报销时效相关制度"
+          }
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取候选制度原文核对报销时效"
+          }
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D02",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取另一候选制度原文，核对是否存在冲突"
+          }
+        },
+        {
+          "step": 5,
+          "action": "clarify",
+          "arguments": {
+            "answer": "检索到两份同名《报销期限》制度，但规定不同，且原文均未写明适用范围或优先级，无法判断哪份应适用：\\n\\n- D01（版本日期 2026-10-01）：原文为「报销期限 30 天。」\\n- D02（版本日期 2026-10-15）：原文为「报销期限 15 天。」\\n\\n请确认：您所适用的报销制度是哪一份（或面向哪个主体/费用类型）？或是否已知两份制度的适用关系（如按费用类型、地区、发布主体区分）？确认后我再给出结论。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_C2giD21gdtNsYFnofUcY1049"
+              },
+              {
+                "document_id": "D02",
+                "version_date": "2026-10-15",
+                "quote": "报销期限 15 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_e9ELLnqHbbgJNHzKsbSB2507"
+              }
+            ],
+            "gaps": [
+              "两份同名制度对报销期限规定不一致（30 天 vs 15 天），原文未写明适用范围与优先级",
+              "缺少用户所适用主体/费用类型信息，无法确定应适用哪份制度"
+            ],
+            "decision_summary": "两份同名《报销期限》制度分别规定 30 天与 15 天，原文均无适用范围或优先级说明，需用户确认适用哪份。"
+          }
+        }
+      ],
+      "tool_results": [
+        {
+          "event": "tool_result",
+          "run_id": "9ed953c6-7ee2-4456-8eee-b82b2204cce1",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:53:58.346948+08:00",
+          "step": 1,
+          "call_id": "call_00_iZ1Cb13AT2eSeyu64JCH6999",
+          "tool": "search_documents",
+          "arguments": {
+            "query": "报销时效 期限",
+            "limit": 10
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "query": "报销时效 期限",
+              "matches": [
+                {
+                  "id": "D01",
+                  "version_date": "2026-10-01",
+                  "title": "报销期限",
+                  "summary": "报销期限 30 天。",
+                  "score": 4
+                },
+                {
+                  "id": "D02",
+                  "version_date": "2026-10-15",
+                  "title": "报销期限",
+                  "summary": "报销期限 15 天。",
+                  "score": 4
+                }
+              ],
+              "total_matches": 2,
+              "has_more": false
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"query\": \"报销时效 期限\", \"matches\": [{\"id\": \"D01\", \"version_date\": \"2026-10-01\", \"title\": \"报销期限\", \"summary\": \"报销期限 30 天。\", \"score\": 4}, {\"id\": \"D02\", \"version_date\": \"2026-10-15\", \"title\": \"报销期限\", \"summary\": \"报销期限 15 天。\", \"score\": 4}], \"total_matches\": 2, \"has_more\": false}}"
+        },
+        {
+          "event": "tool_result",
+          "run_id": "9ed953c6-7ee2-4456-8eee-b82b2204cce1",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:54:10.614612+08:00",
+          "step": 3,
+          "call_id": "call_00_C2giD21gdtNsYFnofUcY1049",
+          "tool": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "text": "报销期限 30 天。",
+              "start": 0,
+              "end": 10,
+              "total_length": 10,
+              "has_more": false,
+              "read_call_id": "call_00_C2giD21gdtNsYFnofUcY1049"
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"id\": \"D01\", \"version_date\": \"2026-10-01\", \"title\": \"报销期限\", \"text\": \"报销期限 30 天。\", \"start\": 0, \"end\": 10, \"total_length\": 10, \"has_more\": false, \"read_call_id\": \"call_00_C2giD21gdtNsYFnofUcY1049\"}}"
+        },
+        {
+          "event": "tool_result",
+          "run_id": "9ed953c6-7ee2-4456-8eee-b82b2204cce1",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:54:16.523208+08:00",
+          "step": 4,
+          "call_id": "call_00_e9ELLnqHbbgJNHzKsbSB2507",
+          "tool": "read_document",
+          "arguments": {
+            "document_id": "D02",
+            "start": 0,
+            "length": 2000
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "id": "D02",
+              "version_date": "2026-10-15",
+              "title": "报销期限",
+              "text": "报销期限 15 天。",
+              "start": 0,
+              "end": 10,
+              "total_length": 10,
+              "has_more": false,
+              "read_call_id": "call_00_e9ELLnqHbbgJNHzKsbSB2507"
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"id\": \"D02\", \"version_date\": \"2026-10-15\", \"title\": \"报销期限\", \"text\": \"报销期限 15 天。\", \"start\": 0, \"end\": 10, \"total_length\": 10, \"has_more\": false, \"read_call_id\": \"call_00_e9ELLnqHbbgJNHzKsbSB2507\"}}"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ]
+    },
+    "A1": {
+      "evidence": "after-real/cases/real/test_conflict_with_synonym_question/conflict",
+      "input": {
+        "question": "报销时效有多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "f66ce996-da36-472c-9be3-6630c73cde25",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "检索到两份标题同为《报销期限》的制度，规定不一致，且原文未说明适用范围、生效状态或相互替代关系，因此无法确定适用哪一条：\n\n- D01（版本日期 2026-10-01）：“报销期限 30 天。”\n- D02（版本日期 2026-10-15）：“报销期限 15 天。”\n\n仅凭版本日期较新不能认定 D02 优先，也不能确定两者分别适用于哪些费用类型或主体。请确认：应以哪一份为准（或你所属公司/费用类型适用哪一份）？确认后我可据此给出准确时效。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_DPqr3xPvva7wof8RyQA57863"
+          },
+          {
+            "document_id": "D02",
+            "version_date": "2026-10-15",
+            "quote": "报销期限 15 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_b4lOiQGhZts5dFXSuf5E9374"
+          }
+        ],
+        "gaps": [
+          "两份制度对报销期限规定矛盾（D01 为 30 天，D02 为 15 天），且原文未载明适用范围、生效/废止状态或相互替代关系",
+          "缺少用户所属主体及所报销费用类型，无法判断应适用哪份制度"
+        ],
+        "status": "needs_clarification",
+        "termination_source": "model",
+        "steps_used": 5,
+        "tool_calls": 3,
+        "api_calls": 5,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "not_run",
+            "method": "not_required_for_noncompleted"
+          }
+        }
+      },
+      "documents": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D02",
+            "title": "报销期限",
+            "version_date": "2026-10-15",
+            "content": "报销期限 15 天。"
+          }
+        ],
+        "faults": {}
+      },
+      "run": {
+        "run_id": "f66ce996-da36-472c-9be3-6630c73cde25",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "started_at": "2026-11-01T18:56:34.350000+08:00",
+        "finished_at": "2026-11-01T18:57:05.425874+08:00",
+        "command": [
+          "python",
+          "-m",
+          "src.cli",
+          "--mode",
+          "real",
+          "--data",
+          "E:\\temp2\\data\\scenarios\\conflict.json",
+          "--input",
+          "E:\\temp2\\examples\\improvements\\synonym-001\\after-real\\cases\\real\\test_conflict_with_synonym_question\\conflict-input.json",
+          "--max-steps",
+          "8",
+          "--output-dir",
+          "E:\\temp2\\examples\\improvements\\synonym-001\\after-real\\cases\\real\\test_conflict_with_synonym_question\\conflict"
+        ],
+        "python_version": "3.10.0",
+        "max_steps": 8,
+        "steps_used": 5,
+        "tool_calls": 3,
+        "api_calls": 5,
+        "status": "needs_clarification",
+        "termination_source": "model",
+        "provider": "deepseek",
+        "endpoint": "https://api.deepseek.com/responses",
+        "reasoning_effort": "none",
+        "data_sha256": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+        "source_sha256": {
+          "src/__init__.py": "26dda23055721ab2921774dcdcc244517b5566e25a83a4be7e08dda97e688d3d",
+          "src/agent.py": "2fe8479f3a9dc871b4510bf0cbfb754a60c1bb89969bc1b08f12dd275ec02856",
+          "src/cli.py": "c32bb595afa0a075206ed99f9ebd8e88ef49c3a2951c6e04c1f150248994bdb0",
+          "src/mock_model.py": "3867e703252584880d95f58a623179e2fedb99764ac3d0f2584fdc8fa1aa2af5",
+          "src/models.py": "c4a48db18046cb28db40361a81e53b8b548cad89af7c47215880181db9dbc1e4",
+          "src/prompts.py": "eb3310d75f9d9a690b9678079ed20adee8980e0a3eeec739859e11440475fd47",
+          "src/tools.py": "31073f1c9eb6b9d98d134fdfdbc9dd33ba915e8b730a78efcaba906b6a92cef1",
+          "src/validation.py": "243a826a7e0baaafb1d55af65b33622e742bd7793fd92496601c8c440cc5f93b"
+        },
+        "mock_script_sha256": null
+      },
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销时效 报销期限",
+            "limit": 10,
+            "decision_summary": "检索报销时效相关制度原文"
+          }
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "工具要求单次一个动作，先读取 D01 原文核对 30 天口径及适用范围"
+          }
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D02",
+            "start": 0,
+            "length": 2000,
+            "decision_summary": "读取 D02 原文；其摘要为 15 天，与 D01 的 30 天矛盾，需核对是否同一制度不同版本及适用范围"
+          }
+        },
+        {
+          "step": 5,
+          "action": "clarify",
+          "arguments": {
+            "answer": "检索到两份标题同为《报销期限》的制度，规定不一致，且原文未说明适用范围、生效状态或相互替代关系，因此无法确定适用哪一条：\n\n- D01（版本日期 2026-10-01）：“报销期限 30 天。”\n- D02（版本日期 2026-10-15）：“报销期限 15 天。”\n\n仅凭版本日期较新不能认定 D02 优先，也不能确定两者分别适用于哪些费用类型或主体。请确认：应以哪一份为准（或你所属公司/费用类型适用哪一份）？确认后我可据此给出准确时效。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_DPqr3xPvva7wof8RyQA57863"
+              },
+              {
+                "document_id": "D02",
+                "version_date": "2026-10-15",
+                "quote": "报销期限 15 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_b4lOiQGhZts5dFXSuf5E9374"
+              }
+            ],
+            "gaps": [
+              "两份制度对报销期限规定矛盾（D01 为 30 天，D02 为 15 天），且原文未载明适用范围、生效/废止状态或相互替代关系",
+              "缺少用户所属主体及所报销费用类型，无法判断应适用哪份制度"
+            ],
+            "decision_summary": "两份同名制度原文分别规定报销期限 30 天与 15 天，均未说明适用范围或优先关系；证据矛盾，按规则不擅自取舍，列出双方原文并请求确认。"
+          }
+        }
+      ],
+      "tool_results": [
+        {
+          "event": "tool_result",
+          "run_id": "f66ce996-da36-472c-9be3-6630c73cde25",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:56:40.009671+08:00",
+          "step": 1,
+          "call_id": "call_00_QzGdYZmi6cq9ebGTT4Fw2652",
+          "tool": "search_documents",
+          "arguments": {
+            "query": "报销时效 报销期限",
+            "limit": 10
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "query": "报销时效 报销期限",
+              "matches": [
+                {
+                  "id": "D01",
+                  "version_date": "2026-10-01",
+                  "title": "报销期限",
+                  "summary": "报销期限 30 天。",
+                  "score": 6
+                },
+                {
+                  "id": "D02",
+                  "version_date": "2026-10-15",
+                  "title": "报销期限",
+                  "summary": "报销期限 15 天。",
+                  "score": 6
+                }
+              ],
+              "total_matches": 2,
+              "has_more": false
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"query\": \"报销时效 报销期限\", \"matches\": [{\"id\": \"D01\", \"version_date\": \"2026-10-01\", \"title\": \"报销期限\", \"summary\": \"报销期限 30 天。\", \"score\": 6}, {\"id\": \"D02\", \"version_date\": \"2026-10-15\", \"title\": \"报销期限\", \"summary\": \"报销期限 15 天。\", \"score\": 6}], \"total_matches\": 2, \"has_more\": false}}"
+        },
+        {
+          "event": "tool_result",
+          "run_id": "f66ce996-da36-472c-9be3-6630c73cde25",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:56:51.799209+08:00",
+          "step": 3,
+          "call_id": "call_00_DPqr3xPvva7wof8RyQA57863",
+          "tool": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "start": 0,
+            "length": 2000
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "text": "报销期限 30 天。",
+              "start": 0,
+              "end": 10,
+              "total_length": 10,
+              "has_more": false,
+              "read_call_id": "call_00_DPqr3xPvva7wof8RyQA57863"
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"id\": \"D01\", \"version_date\": \"2026-10-01\", \"title\": \"报销期限\", \"text\": \"报销期限 30 天。\", \"start\": 0, \"end\": 10, \"total_length\": 10, \"has_more\": false, \"read_call_id\": \"call_00_DPqr3xPvva7wof8RyQA57863\"}}"
+        },
+        {
+          "event": "tool_result",
+          "run_id": "f66ce996-da36-472c-9be3-6630c73cde25",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:56:57.574385+08:00",
+          "step": 4,
+          "call_id": "call_00_b4lOiQGhZts5dFXSuf5E9374",
+          "tool": "read_document",
+          "arguments": {
+            "document_id": "D02",
+            "start": 0,
+            "length": 2000
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "id": "D02",
+              "version_date": "2026-10-15",
+              "title": "报销期限",
+              "text": "报销期限 15 天。",
+              "start": 0,
+              "end": 10,
+              "total_length": 10,
+              "has_more": false,
+              "read_call_id": "call_00_b4lOiQGhZts5dFXSuf5E9374"
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"id\": \"D02\", \"version_date\": \"2026-10-15\", \"title\": \"报销期限\", \"text\": \"报销期限 15 天。\", \"start\": 0, \"end\": 10, \"total_length\": 10, \"has_more\": false, \"read_call_id\": \"call_00_b4lOiQGhZts5dFXSuf5E9374\"}}"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ]
+    },
+    "B1": {
+      "evidence": "after-real/cases/real/test_agreement_with_synonym_question/agreement",
+      "input": {
+        "question": "报销时效有多久？",
+        "history": []
+      },
+      "output": {
+        "run_id": "43fcbe43-bd62-4875-a9e3-00146fefbc1c",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "answer": "报销期限为 30 天。现有两份同名《报销期限》制度（D01，版本日期 2026-10-01；D02，版本日期 2026-10-15）规定一致，均为“报销期限 30 天”。需注意：制度原文未说明起算点（如从费用发生日还是发票开具日起算）以及适用范围。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "version_date": "2026-10-01",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_Gku9p3qV8qUPHQ8Tc4ut6803"
+          },
+          {
+            "document_id": "D02",
+            "version_date": "2026-10-15",
+            "quote": "报销期限 30 天。",
+            "start": 0,
+            "end": 10,
+            "read_call_id": "call_00_rQJG889NBQ354LrpLkIx4194"
+          }
+        ],
+        "gaps": [],
+        "status": "completed",
+        "termination_source": "model",
+        "steps_used": 6,
+        "tool_calls": 3,
+        "api_calls": 6,
+        "verification": {
+          "citation_integrity": "passed",
+          "semantic_support": {
+            "verdict": "supported",
+            "reason": "两份同名制度原文均仅载“报销期限 30 天”，引用逐字相符且无冲突，回答同时如实指出起算点与适用范围未规定。",
+            "method": "same_model_review",
+            "mode": "real"
+          }
+        }
+      },
+      "documents": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D02",
+            "title": "报销期限",
+            "version_date": "2026-10-15",
+            "content": "报销期限 30 天。"
+          }
+        ],
+        "faults": {}
+      },
+      "run": {
+        "run_id": "43fcbe43-bd62-4875-a9e3-00146fefbc1c",
+        "mode": "real",
+        "model": "deepseek-flash",
+        "started_at": "2026-11-01T18:55:56.516525+08:00",
+        "finished_at": "2026-11-01T18:56:34.342550+08:00",
+        "command": [
+          "python",
+          "-m",
+          "src.cli",
+          "--mode",
+          "real",
+          "--data",
+          "E:\\temp2\\examples\\improvements\\synonym-001\\after-real\\cases\\real\\test_agreement_with_synonym_question\\agreement-data.json",
+          "--input",
+          "E:\\temp2\\examples\\improvements\\synonym-001\\after-real\\cases\\real\\test_agreement_with_synonym_question\\agreement-input.json",
+          "--max-steps",
+          "8",
+          "--output-dir",
+          "E:\\temp2\\examples\\improvements\\synonym-001\\after-real\\cases\\real\\test_agreement_with_synonym_question\\agreement"
+        ],
+        "python_version": "3.10.0",
+        "max_steps": 8,
+        "steps_used": 6,
+        "tool_calls": 3,
+        "api_calls": 6,
+        "status": "completed",
+        "termination_source": "model",
+        "provider": "deepseek",
+        "endpoint": "https://api.deepseek.com/responses",
+        "reasoning_effort": "none",
+        "data_sha256": "b0ad59eb25b270c2c7971d663ed02e971a39b1bb19c9d116b2443ec0cfb7df92",
+        "source_sha256": {
+          "src/__init__.py": "26dda23055721ab2921774dcdcc244517b5566e25a83a4be7e08dda97e688d3d",
+          "src/agent.py": "2fe8479f3a9dc871b4510bf0cbfb754a60c1bb89969bc1b08f12dd275ec02856",
+          "src/cli.py": "c32bb595afa0a075206ed99f9ebd8e88ef49c3a2951c6e04c1f150248994bdb0",
+          "src/mock_model.py": "3867e703252584880d95f58a623179e2fedb99764ac3d0f2584fdc8fa1aa2af5",
+          "src/models.py": "c4a48db18046cb28db40361a81e53b8b548cad89af7c47215880181db9dbc1e4",
+          "src/prompts.py": "eb3310d75f9d9a690b9678079ed20adee8980e0a3eeec739859e11440475fd47",
+          "src/tools.py": "31073f1c9eb6b9d98d134fdfdbc9dd33ba915e8b730a78efcaba906b6a92cef1",
+          "src/validation.py": "243a826a7e0baaafb1d55af65b33622e742bd7793fd92496601c8c440cc5f93b"
+        },
+        "mock_script_sha256": null
+      },
+      "actions": [
+        {
+          "step": 1,
+          "action": "search_documents",
+          "arguments": {
+            "query": "报销 时效 期限 提交 天数",
+            "limit": 10,
+            "decision_summary": "检索报销时效相关制度候选，需读取原文核对。"
+          }
+        },
+        {
+          "step": 3,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "length": 2000,
+            "start": 0,
+            "decision_summary": "读取 D01 原文核对报销期限具体规定与适用范围。"
+          }
+        },
+        {
+          "step": 4,
+          "action": "read_document",
+          "arguments": {
+            "document_id": "D02",
+            "length": 2000,
+            "start": 0,
+            "decision_summary": "读取 D02 原文，核对是否与 D01 一致及是否存在版本优先级冲突。"
+          }
+        },
+        {
+          "step": 5,
+          "action": "answer",
+          "arguments": {
+            "answer": "报销期限为 30 天。现有两份同名《报销期限》制度（D01，版本日期 2026-10-01；D02，版本日期 2026-10-15）规定一致，均为“报销期限 30 天”。需注意：制度原文未说明起算点（如从费用发生日还是发票开具日起算）以及适用范围。",
+            "citations": [
+              {
+                "document_id": "D01",
+                "version_date": "2026-10-01",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_Gku9p3qV8qUPHQ8Tc4ut6803"
+              },
+              {
+                "document_id": "D02",
+                "version_date": "2026-10-15",
+                "quote": "报销期限 30 天。",
+                "start": 0,
+                "end": 10,
+                "read_call_id": "call_00_rQJG889NBQ354LrpLkIx4194"
+              }
+            ],
+            "gaps": [],
+            "decision_summary": "检索到两份同名《报销期限》制度，均读取原文，内容一致为“报销期限 30 天”，无冲突，据此作答并注明未规定起算点与适用范围。"
+          }
+        },
+        {
+          "step": 6,
+          "action": "assess_answer",
+          "arguments": {
+            "verdict": "supported",
+            "reason": "两份同名制度原文均仅载“报销期限 30 天”，引用逐字相符且无冲突，回答同时如实指出起算点与适用范围未规定。"
+          }
+        }
+      ],
+      "tool_results": [
+        {
+          "event": "tool_result",
+          "run_id": "43fcbe43-bd62-4875-a9e3-00146fefbc1c",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:56:03.941609+08:00",
+          "step": 1,
+          "call_id": "call_00_0COGXQQvOAhAHzX51Rzq8197",
+          "tool": "search_documents",
+          "arguments": {
+            "query": "报销 时效 期限 提交 天数",
+            "limit": 10
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "query": "报销 时效 期限 提交 天数",
+              "matches": [
+                {
+                  "id": "D01",
+                  "version_date": "2026-10-01",
+                  "title": "报销期限",
+                  "summary": "报销期限 30 天。",
+                  "score": 4
+                },
+                {
+                  "id": "D02",
+                  "version_date": "2026-10-15",
+                  "title": "报销期限",
+                  "summary": "报销期限 30 天。",
+                  "score": 4
+                }
+              ],
+              "total_matches": 2,
+              "has_more": false
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"query\": \"报销 时效 期限 提交 天数\", \"matches\": [{\"id\": \"D01\", \"version_date\": \"2026-10-01\", \"title\": \"报销期限\", \"summary\": \"报销期限 30 天。\", \"score\": 4}, {\"id\": \"D02\", \"version_date\": \"2026-10-15\", \"title\": \"报销期限\", \"summary\": \"报销期限 30 天。\", \"score\": 4}], \"total_matches\": 2, \"has_more\": false}}"
+        },
+        {
+          "event": "tool_result",
+          "run_id": "43fcbe43-bd62-4875-a9e3-00146fefbc1c",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:56:15.948716+08:00",
+          "step": 3,
+          "call_id": "call_00_Gku9p3qV8qUPHQ8Tc4ut6803",
+          "tool": "read_document",
+          "arguments": {
+            "document_id": "D01",
+            "length": 2000,
+            "start": 0
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "text": "报销期限 30 天。",
+              "start": 0,
+              "end": 10,
+              "total_length": 10,
+              "has_more": false,
+              "read_call_id": "call_00_Gku9p3qV8qUPHQ8Tc4ut6803"
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"id\": \"D01\", \"version_date\": \"2026-10-01\", \"title\": \"报销期限\", \"text\": \"报销期限 30 天。\", \"start\": 0, \"end\": 10, \"total_length\": 10, \"has_more\": false, \"read_call_id\": \"call_00_Gku9p3qV8qUPHQ8Tc4ut6803\"}}"
+        },
+        {
+          "event": "tool_result",
+          "run_id": "43fcbe43-bd62-4875-a9e3-00146fefbc1c",
+          "mode": "real",
+          "model": "deepseek-flash",
+          "time": "2026-11-01T18:56:21.809532+08:00",
+          "step": 4,
+          "call_id": "call_00_rQJG889NBQ354LrpLkIx4194",
+          "tool": "read_document",
+          "arguments": {
+            "document_id": "D02",
+            "length": 2000,
+            "start": 0
+          },
+          "result": {
+            "ok": true,
+            "data": {
+              "id": "D02",
+              "version_date": "2026-10-15",
+              "title": "报销期限",
+              "text": "报销期限 30 天。",
+              "start": 0,
+              "end": 10,
+              "total_length": 10,
+              "has_more": false,
+              "read_call_id": "call_00_rQJG889NBQ354LrpLkIx4194"
+            }
+          },
+          "result_summary": "{\"ok\": true, \"data\": {\"id\": \"D02\", \"version_date\": \"2026-10-15\", \"title\": \"报销期限\", \"text\": \"报销期限 30 天。\", \"start\": 0, \"end\": 10, \"total_length\": 10, \"has_more\": false, \"read_call_id\": \"call_00_rQJG889NBQ354LrpLkIx4194\"}}"
+        }
+      ],
+      "validation_errors": [
+        {
+          "step": 2,
+          "code": "ONE_ACTION_REQUIRED"
+        }
+      ]
+    }
+  },
+  "real_tests": {
+    "passed": 3,
+    "failed": 0,
+    "api_requests": 16,
+    "execution_order": [
+      "A0",
+      "B1",
+      "A1"
+    ]
+  },
+  "offline_tests": {
+    "passed": 70,
+    "failed": 0,
+    "error": 0,
+    "not_run": 12
+  },
+  "deterministic_retrieval": {
+    "before_tools": "before-tools.json",
+    "after_tools": "after-tools.json",
+    "normal_D01_D03_before": [
+      2,
+      2
+    ],
+    "normal_D01_D03_after": [
+      6,
+      2
+    ]
+  },
+  "causal_controls": {
+    "A0_A1": "同问题/历史/资料/服务配置；生产源码只改变src/tools.py一条映射",
+    "A1_B1": "全部生产源码相同；同问题/历史/服务配置，仅D02.content从15改30",
+    "runtime_files_changed_A0_A1": [
+      "src/tools.py"
+    ]
+  },
+  "conclusions": [
+    "固定工具查询的期限文档区分度提高，双方冲突候选和原文保持",
+    "A0与A1都澄清；B1读取一致原文后完成，反事实资料变化得到响应",
+    "A0/A1各5次请求，没有证据表明本次减少模型调用；B1为6次请求",
+    "三次模型实际检索词均已包含期限；它们验证冲突处理和资料变化响应，不能证明新词条提高总体质量或效率。"
+  ],
+  "not_verified": [
+    "用户亲自复核",
+    "用户手工修改或亲自运行（尚无对应记录）",
+    "同义词泛化/大样本准确率/稳定性",
+    "此词条修改后的原十项真实验收全量重跑",
+    "干净环境复现与最终仓库交付"
+  ]
+}

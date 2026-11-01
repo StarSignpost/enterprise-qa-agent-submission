@@ -1,0 +1,11 @@
+test_b01_clear_answer (tests.test_live.LiveAcceptanceTests) ... ok
+test_b02_conflicting_documents (tests.test_live.LiveAcceptanceTests) ... ok
+test_b03_outside_corpus_with_partial_keyword_hits (tests.test_live.LiveAcceptanceTests) ... ok
+test_b04_paraphrase_preserves_facts_and_sources (tests.test_live.LiveAcceptanceTests) ... ok
+test_b05_context_follow_up (tests.test_live.LiveAcceptanceTests) ... ok
+test_b06_tool_failure_has_explicit_cause (tests.test_live.LiveAcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 244.089s
+
+OK

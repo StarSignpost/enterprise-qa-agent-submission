@@ -1,0 +1,43 @@
+{
+  "mode": "mock",
+  "description": "Scripted offline test actions; not real model decisions",
+  "actions": [
+    {
+      "name": "search_documents",
+      "arguments": {
+        "query": "报销期限",
+        "limit": 5,
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    },
+    {
+      "name": "read_document",
+      "arguments": {
+        "document_id": "D01",
+        "start": 0,
+        "length": 500,
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    },
+    {
+      "name": "stop",
+      "arguments": {
+        "answer": "原文读取工具不可用，未取得可核验证据，无法完成。",
+        "citations": [],
+        "gaps": [
+          "需要恢复原文读取工具，或提供可核验的制度原文"
+        ],
+        "status": "failed",
+        "decision_summary": "观察到读取工具持续不可用，明确报告失败"
+      },
+      "expect": {
+        "mock-2": {
+          "ok": false,
+          "error": {
+            "code": "TOOL_UNAVAILABLE"
+          }
+        }
+      }
+    }
+  ]
+}

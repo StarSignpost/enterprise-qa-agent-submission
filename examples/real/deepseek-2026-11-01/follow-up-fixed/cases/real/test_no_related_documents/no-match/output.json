@@ -1,0 +1,22 @@
+{
+  "run_id": "aa199f5a-e128-461b-b9b7-71ac96756b24",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "未能在知识库中检索到与“报销期限”相关的制度文档：以“报销期限”“费用报销 时限”“报销”等关键词检索均返回 0 条结果。因此无法给出报销期限的准确规定，也不宜以常识推断。建议确认报销制度是否已入库，或改用制度正式名称（如《费用报销管理办法》）再查询。",
+  "citations": [],
+  "gaps": [
+    "知识库中未检索到任何与“报销”相关的制度文档，缺少报销期限的制度依据"
+  ],
+  "status": "incomplete",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 3,
+  "api_calls": 5,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

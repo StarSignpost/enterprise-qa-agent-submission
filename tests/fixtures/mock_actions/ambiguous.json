@@ -1,0 +1,17 @@
+{
+  "mode": "mock",
+  "description": "Scripted offline test actions; not real model decisions",
+  "actions": [
+    {
+      "name": "clarify",
+      "arguments": {
+        "answer": "请说明查询什么事项或制度？",
+        "citations": [],
+        "gaps": [
+          "缺少事项名称"
+        ],
+        "decision_summary": "根据已收到的观察选择此动作"
+      }
+    }
+  ]
+}

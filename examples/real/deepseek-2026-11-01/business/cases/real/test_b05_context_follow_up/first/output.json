@@ -1,0 +1,40 @@
+{
+  "run_id": "26d783eb-7f85-49a5-b0fe-db6947431072",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "未能完整确认差旅报销期限。《报销期限》文件（版本日期 2026-10-01）全文仅为“报销期限 30 天”，未说明该期限是否专用于差旅报销及起算时点；另一份《差旅报销材料》文件仅规定“差旅报销需提交发票和出差审批单”，未涉及期限。因此无法确认 30 天期限是否适用于差旅报销，建议向财务部门核实。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "version_date": "2026-10-01",
+      "quote": "报销期限 30 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "call_00_GDczhgl2NG0UWTxaOSod0947"
+    },
+    {
+      "document_id": "D03",
+      "version_date": "2026-10-01",
+      "quote": "差旅报销需提交发票和出差审批单。",
+      "start": 0,
+      "end": 16,
+      "read_call_id": "call_00_Oe6dtKaZuDGZlw9YnCT45658"
+    }
+  ],
+  "gaps": [
+    "《报销期限》未明确 30 天期限是否专用于差旅报销",
+    "未规定期限起算时点"
+  ],
+  "status": "incomplete",
+  "termination_source": "model",
+  "steps_used": 6,
+  "tool_calls": 3,
+  "api_calls": 6,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

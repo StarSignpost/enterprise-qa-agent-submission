@@ -1,0 +1,22 @@
+{
+  "run_id": "c02b15cd-3039-4a0f-8044-6ce0821a32dc",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "answer": "原文读取工具不可用，未取得可核验证据，无法完成。",
+  "citations": [],
+  "gaps": [
+    "需要恢复原文读取工具，或提供可核验的制度原文"
+  ],
+  "status": "failed",
+  "termination_source": "model",
+  "steps_used": 3,
+  "tool_calls": 2,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

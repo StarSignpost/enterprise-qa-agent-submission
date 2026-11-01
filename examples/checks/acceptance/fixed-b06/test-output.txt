@@ -1,0 +1,6 @@
+test_b06_tool_failure_has_explicit_cause (tests.test_acceptance.OfflineAcceptanceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.021s
+
+OK

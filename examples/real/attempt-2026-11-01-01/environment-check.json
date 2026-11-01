@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-01T17:36:55.4812498+08:00",
+  "timezone": "Asia/Shanghai",
+  "project_env_file_present": false,
+  "checked_names": [
+    "OPENAI_API_KEY",
+    "OPENAI_MODEL"
+  ],
+  "scopes": [
+    {
+      "scope": "Process",
+      "api_key_present": false,
+      "model_present": false
+    },
+    {
+      "scope": "User",
+      "api_key_present": false,
+      "model_present": false
+    },
+    {
+      "scope": "Machine",
+      "api_key_present": false,
+      "model_present": false
+    }
+  ]
+}

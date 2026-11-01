@@ -1,0 +1,19 @@
+test_b01_clear_answer (tests.test_live.LiveAcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_b01_clear_answer (tests.test_live.LiveAcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\temp2\tests\acceptance_support.py", line 138, in test_b01_clear_answer
+    self.check_deadline(self.run_case("normal"))
+  File "E:\temp2\tests\acceptance_support.py", line 109, in check_deadline
+    self.assertEqual(output["status"], "completed")
+AssertionError: 'failed' != 'completed'
+- failed
++ completed
+
+
+----------------------------------------------------------------------
+Ran 1 test in 43.643s
+
+FAILED (failures=1)

@@ -1,0 +1,1 @@
+{"test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b06_tool_failure_has_explicit_cause", "label": "failure", "mode": "mock", "evidence": "cases/test_b06_tool_failure_has_explicit_cause/failure", "actual_status": "failed", "exit_code": 1, "api_calls": 0}

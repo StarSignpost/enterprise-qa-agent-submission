@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+
+# Local exam originals contain personal information and private access links.
+/*笔试题*.html
+/*笔试题*_files/

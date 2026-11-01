@@ -1,0 +1,566 @@
+{
+  "record_kind": "acceptance_validation",
+  "started_at": "2026-11-01T17:06:52.833630+08:00",
+  "finished_at": "2026-11-01T17:06:53.134177+08:00",
+  "python_version": "3.10.0",
+  "command": [
+    "python",
+    "-m",
+    "tests.run_validation",
+    "--output-dir",
+    "examples/checks/acceptance/full"
+  ],
+  "live_requested": false,
+  "tests_run": 72,
+  "successful": true,
+  "provider_network_blocked": true,
+  "counts": {
+    "passed": 66,
+    "failed": 0,
+    "error": 0,
+    "not_run": 6
+  },
+  "results": [
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x01_underspecified_question_asks_specific_field",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.015
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x02_execution_limit_is_explicitly_incomplete",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x03_nonexistent_id_and_wrong_quote_cannot_complete",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x04_failed_read_cannot_be_reported_as_success",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.015
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x05_existing_quote_does_not_prove_support",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x06_different_wording_and_valid_action_order_are_accepted",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.031
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x07_partial_read_cannot_cite_unread_source_text",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x08_nonzero_offsets_and_subquotes_are_valid",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x09_read_failure_can_recover_only_after_new_model_action",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x10_empty_model_responses_cannot_loop_forever",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_acceptance.BoundaryAcceptanceTests.test_x11_duplicate_call_id_does_not_overwrite_evidence",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b01_clear_answer",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.015
+    },
+    {
+      "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b02_conflicting_documents",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b03_outside_corpus_with_partial_keyword_hits",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b04_paraphrase_preserves_facts_and_sources",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.015
+    },
+    {
+      "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b05_context_follow_up",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.031
+    },
+    {
+      "test_id": "tests.test_acceptance.OfflineAcceptanceTests.test_b06_tool_failure_has_explicit_cause",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_api_error_does_not_switch_adapter",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_boolean_and_out_of_range_tool_parameters_are_errors",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_candidate_at_limit_cannot_skip_semantic_review",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_cli_missing_dataset_retains_original_failure",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_cli_missing_real_config_fails_with_zero_api_calls",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_cli_saves_explicit_mode_evidence_and_refuses_overwrite",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.031
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_conflict_evidence_then_model_clarifies",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_existing_quote_does_not_bypass_semantic_support_check",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_history_is_passed_in_original_order_without_topic_rewrite",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_invalid_history_and_max_steps_fail_before_deciding",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_invalid_json_can_be_reported_and_repaired",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_malformed_mock_script_fails_explicitly",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_missing_or_wrong_read_proof_cannot_complete",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_model_can_repair_rejected_candidate",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_multiple_calls_are_rejected_without_executing_any",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_outside_corpus_and_ambiguous_question_are_not_forced_answers",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_recorder_redacts_known_key",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_script_exhaustion_is_failure_not_mock_fallback_success",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_search_summary_alone_cannot_be_cited",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_success_feedback_loop_and_separate_semantic_review",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_tool_at_limit_cannot_get_a_free_final_request",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_tool_error_reaches_next_model_decision",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_unexpected_tool_exception_is_observed_not_swallowed",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_agent.AgentTests.test_unknown_actions_consume_budget",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b01_clear_answer",
+      "layer": "real_model",
+      "outcome": "not_run",
+      "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b02_conflicting_documents",
+      "layer": "real_model",
+      "outcome": "not_run",
+      "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b03_outside_corpus_with_partial_keyword_hits",
+      "layer": "real_model",
+      "outcome": "not_run",
+      "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b04_paraphrase_preserves_facts_and_sources",
+      "layer": "real_model",
+      "outcome": "not_run",
+      "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b05_context_follow_up",
+      "layer": "real_model",
+      "outcome": "not_run",
+      "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_live.LiveAcceptanceTests.test_b06_tool_failure_has_explicit_cause",
+      "layer": "real_model",
+      "outcome": "not_run",
+      "detail": "未运行：需显式 --live 及本机模型配置；Mock 不能替代",
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_models.ModelTests.test_actual_observation_and_history_are_in_next_http_payload",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_models.ModelTests.test_http_error_is_sanitized_without_hidden_retry",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_models.ModelTests.test_incomplete_response_cannot_be_accepted",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_models.ModelTests.test_missing_config_does_not_attempt_transport",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_models.ModelTests.test_review_uses_same_provider_and_separate_function",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_conflicting_documents_both_remain_visible",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.016
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_dataset_changes_and_filename_do_not_select_answers",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_fault_comes_from_config_not_filename",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_invalid_dataset_is_not_an_empty_index",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_limit_exposes_truncation_instead_of_hiding_other_match",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_material_synonym_retrieves_document",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_normal_search_metadata_and_verbatim_read",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_optional_scope_must_be_actual_source_text",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_read_continuation_reconstructs_original",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_read_fault_is_persistent_explicit_and_search_still_works",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_read_rejects_missing_ids_and_invalid_ranges",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_scenarios_do_not_leak_documents_between_instances",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_search_fault_is_not_zero_matches",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_search_rejects_invalid_arguments",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_snapshot_copies_input_and_rejects_action_fault_config",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_snapshot_does_not_allow_mutating_live_documents",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_synonym_queries_retrieve_same_evidence",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_underspecified_query_does_not_invent_a_topic_or_action",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_unicode_slice_is_exact_and_search_does_not_normalize_source",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    },
+    {
+      "test_id": "tests.test_tools.ToolTests.test_unrelated_corpus_is_successful_zero_match",
+      "layer": "offline",
+      "outcome": "passed",
+      "detail": null,
+      "duration_seconds": 0.0
+    }
+  ],
+  "source_sha256": {
+    "src/__init__.py": "26dda23055721ab2921774dcdcc244517b5566e25a83a4be7e08dda97e688d3d",
+    "src/agent.py": "a9b2b3f1d27b7f94bf6a07025cefd6ab29199fb3c3dae119a6d2f5ed484dc7b1",
+    "src/cli.py": "6d46154e00a647efa06185feab8bb089f2d9aeab5ca80b7922ec2cc23d8671e1",
+    "src/mock_model.py": "3867e703252584880d95f58a623179e2fedb99764ac3d0f2584fdc8fa1aa2af5",
+    "src/models.py": "8c5e62590d01141c6539e288f0592a08d38a8fd3a707e0b29b070423a01feae9",
+    "src/prompts.py": "429ef504233d33f8d046f2c9e2cc44f77ae34b6f24a20051329c64778d9ce007",
+    "src/tools.py": "9a31a67fb57b6eb12aec461b5e1b13843439cdcffa19694e9170fec421f5ad6b",
+    "src/validation.py": "243a826a7e0baaafb1d55af65b33622e742bd7793fd92496601c8c440cc5f93b",
+    "tests/__init__.py": "b6bf01e8232399e4ed48e9ded3c48cbc998df903e376388c2706e07fd27c4041",
+    "tests/acceptance_support.py": "d8f81e1b8eca6db8a4cb731fe88beeb8c085b6c29add2a31ddefba2242770419",
+    "tests/run_validation.py": "0789b545c98c320cb240848ade8abf1ff86ea548185c27a48d0af6a35534e65c",
+    "tests/test_acceptance.py": "4edc88493c206c10f1455b0654736dd093a8d72440d9c8543d3bbe32d20b52af",
+    "tests/test_agent.py": "f9d41e9e2c463ccc1e1220a64828b2bb824fbe00cea9acd419b708c9b0ec3cf6",
+    "tests/test_live.py": "527702f964ab8de59323a5bc56ad4db01d02f2c4b22ffe75b1729c0593f14b2b",
+    "tests/test_models.py": "a4d2169aedd01d578c95e629d89ff05a891f27cd8cb7d1fb1b8b7af87ea43a22",
+    "tests/test_tools.py": "473be1c55224d7b5b8451987ec1595a6031f1fecb853dbbe385a78e33932651c",
+    "tests/fixtures/mock_actions/ambiguous.json": "4366a29a82493267bc0ddadc5f0577eebda224c83c0dad0d8f53012ca3a360be",
+    "tests/fixtures/mock_actions/conflict.json": "f079e556c43669afa160d63bb519b1ae6ad1bb4338f2d99a576c2e1b305d7c9c",
+    "tests/fixtures/mock_actions/follow_up.json": "adae26a05f8378a405d742d0b89e2c7284f73a2184cce54a88fb59dbc8eefcfa",
+    "tests/fixtures/mock_actions/invalid_actions.json": "b23c3dd287d5032c5e5a56e852ae123f4e25eba87a2872632b8e6e9bd5f8915d",
+    "tests/fixtures/mock_actions/normal.json": "00f6f2a5f5bb1d0546ca453d7b9f0014b0c4e1eb109410e5549f6946fe44fdf6",
+    "tests/fixtures/mock_actions/out_of_scope.json": "606c7740cec5eb56cea526b58c782547f6f702f76122dbaf6d7daa62b369c63e",
+    "tests/fixtures/mock_actions/paraphrase.json": "497e7ffa2e4ef378f4d2da87e1c9ed346ccdd63892db27167069ac3a5ee2d756",
+    "tests/fixtures/mock_actions/tool_error.json": "686b688bde31059ee7d008991d5b0242db707bc3ef725da8e27c11ebef94337a",
+    "tests/fixtures/mock_actions/unsupported_answer.json": "ffef7c87a8df304f21ca6c65688099aba2433ead02caf016aa458efc743c53c6",
+    "data/scenarios/ambiguous.json": "21fa686a21dd57addf8f686db6121fd037a445b082a4d872bf95929d18fcc2b9",
+    "data/scenarios/conflict.json": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+    "data/scenarios/no_match.json": "0c043a052c818909cf7a8bf34e696fdb5765016508a067c38c91c5f628f44c0e",
+    "data/scenarios/normal.json": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+    "data/scenarios/tool_error.json": "e2865f01cff2ee02107a1ec7d1104b3871c4ce57bc8ed9f7b66326ab1a05d566"
+  },
+  "boundaries": [
+    "Mock choices and verdicts do not prove live model quality",
+    "Keyword/fact checks do not replace human semantic evaluation",
+    "Unexecuted live checks are not_run, never passed"
+  ]
+}

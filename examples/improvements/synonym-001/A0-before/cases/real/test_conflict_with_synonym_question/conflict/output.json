@@ -1,0 +1,40 @@
+{
+  "run_id": "9ed953c6-7ee2-4456-8eee-b82b2204cce1",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "检索到两份同名《报销期限》制度，但规定不同，且原文均未写明适用范围或优先级，无法判断哪份应适用：\\n\\n- D01（版本日期 2026-10-01）：原文为「报销期限 30 天。」\\n- D02（版本日期 2026-10-15）：原文为「报销期限 15 天。」\\n\\n请确认：您所适用的报销制度是哪一份（或面向哪个主体/费用类型）？或是否已知两份制度的适用关系（如按费用类型、地区、发布主体区分）？确认后我再给出结论。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "version_date": "2026-10-01",
+      "quote": "报销期限 30 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "call_00_C2giD21gdtNsYFnofUcY1049"
+    },
+    {
+      "document_id": "D02",
+      "version_date": "2026-10-15",
+      "quote": "报销期限 15 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "call_00_e9ELLnqHbbgJNHzKsbSB2507"
+    }
+  ],
+  "gaps": [
+    "两份同名制度对报销期限规定不一致（30 天 vs 15 天），原文未写明适用范围与优先级",
+    "缺少用户所适用主体/费用类型信息，无法确定应适用哪份制度"
+  ],
+  "status": "needs_clarification",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 3,
+  "api_calls": 5,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

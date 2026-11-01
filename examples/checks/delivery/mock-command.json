@@ -1,0 +1,27 @@
+{
+  "executed_by": "AI",
+  "started_at": "2026-11-01T19:16:35.709754+08:00",
+  "finished_at": "2026-11-01T19:16:35.918375+08:00",
+  "working_directory": "E:/temp2",
+  "command": [
+    "python",
+    "-m",
+    "src.cli",
+    "--mode",
+    "mock",
+    "--mock-script",
+    "tests/fixtures/mock_actions/normal.json",
+    "--data",
+    "data/scenarios/normal.json",
+    "--input",
+    "examples/inputs/normal.json",
+    "--max-steps",
+    "8",
+    "--output-dir",
+    "examples/checks/delivery/mock-smoke"
+  ],
+  "exit_code": 0,
+  "mode": "mock",
+  "api_calls": 0,
+  "note": "本轮文档命令核对，独立于真实模型验收。"
+}

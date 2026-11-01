@@ -1,0 +1,41 @@
+{
+  "run_id": "61066ddb-5c10-46c0-94a3-49b5d1189c0d",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "现有制度原文无法完整回答“差旅报销期限”。可查到的内容是：单独的《报销期限》文件记载“报销期限 30 天”，但该原文未写明起算时间，也未说明是否适用于差旅报销；《差旅报销材料》仅规定需提交发票和出差审批单，未涉及期限。请确认：“报销期限 30 天”这一规定是否适用于差旅报销、从何时起算？确认后我再据此给出明确答复。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "end": 10,
+      "quote": "报销期限 30 天。",
+      "read_call_id": "call_00_sW4zNRR26XMVvynzxwV94210",
+      "start": 0,
+      "version_date": "2026-10-01"
+    },
+    {
+      "document_id": "D03",
+      "end": 16,
+      "quote": "差旅报销需提交发票和出差审批单。",
+      "read_call_id": "call_00_1yxQYlqeN8hQBHtgP40P6904",
+      "start": 0,
+      "version_date": "2026-10-01"
+    }
+  ],
+  "gaps": [
+    "《报销期限》“30天”是否适用于差旅报销，原文未明确",
+    "报销期限的起算时间（出差结束日、发票开具日等）未规定",
+    "未检索到专门的差旅费管理制度中的报销时效条款"
+  ],
+  "status": "needs_clarification",
+  "termination_source": "model",
+  "steps_used": 8,
+  "tool_calls": 4,
+  "api_calls": 8,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

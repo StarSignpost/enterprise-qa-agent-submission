@@ -1,0 +1,16 @@
+test_b06_tool_failure_has_explicit_cause (tests.test_acceptance.OfflineAcceptanceTests) ... FAIL
+
+======================================================================
+FAIL: test_b06_tool_failure_has_explicit_cause (tests.test_acceptance.OfflineAcceptanceTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\temp2\tests\acceptance_support.py", line 173, in test_b06_tool_failure_has_explicit_cause
+    self.check_tool_failure(self.run_case("failure", scenario="tool_error", script="tool_error"))
+  File "E:\temp2\tests\acceptance_support.py", line 133, in check_tool_failure
+    self.assertRegex(output["answer"] + " ".join(output["gaps"]), r"故障|读取失败|不可用|工具.*失败|工具.*恢复")
+AssertionError: Regex didn't match: '故障|读取失败|不可用|工具.*失败|工具.*恢复' not found in '未取得足够资料，无法完成。需要相关制度或恢复原文读取'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+FAILED (failures=1)

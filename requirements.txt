@@ -1,0 +1,2 @@
+# Runtime: Python 3.10 or newer. This stage uses only the standard library.
+# Tools, CLI, unittest, and the DeepSeek HTTPS adapter use only the standard library.

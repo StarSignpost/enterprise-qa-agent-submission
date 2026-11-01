@@ -1,0 +1,213 @@
+{
+  "record_kind": "tools_only_after",
+  "mode": "tools_only",
+  "recorded_at": "2026-11-01T18:56:27.552851+08:00",
+  "python_version": "3.10.0",
+  "api_calls": 0,
+  "source_sha256": {
+    "src/tools.py": "31073f1c9eb6b9d98d134fdfdbc9dd33ba915e8b730a78efcaba906b6a92cef1",
+    "tests/test_tools.py": "165656d203d3e5ced25d0787d19682b6162eaa87a8bb60a1be82445941707ae5"
+  },
+  "observations": [
+    {
+      "scenario": "normal",
+      "input": {
+        "query": "报销时效有多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销时效有多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 6
+            },
+            {
+              "id": "D03",
+              "version_date": "2026-10-01",
+              "title": "差旅报销材料",
+              "summary": "差旅报销需提交发票和出差审批单。",
+              "score": 2
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/normal.json",
+      "data_sha256": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D03",
+            "title": "差旅报销材料",
+            "version_date": "2026-10-01",
+            "content": "差旅报销需提交发票和出差审批单。"
+          }
+        ],
+        "faults": {}
+      }
+    },
+    {
+      "scenario": "normal",
+      "input": {
+        "query": "报销期限多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销期限多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 6
+            },
+            {
+              "id": "D03",
+              "version_date": "2026-10-01",
+              "title": "差旅报销材料",
+              "summary": "差旅报销需提交发票和出差审批单。",
+              "score": 2
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/normal.json",
+      "data_sha256": "a03433e544d20fc18f26e37691984600b4e5d541b67c04697bdcbe1ddabe3e45",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D03",
+            "title": "差旅报销材料",
+            "version_date": "2026-10-01",
+            "content": "差旅报销需提交发票和出差审批单。"
+          }
+        ],
+        "faults": {}
+      }
+    },
+    {
+      "scenario": "conflict",
+      "input": {
+        "query": "报销时效有多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销时效有多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 6
+            },
+            {
+              "id": "D02",
+              "version_date": "2026-10-15",
+              "title": "报销期限",
+              "summary": "报销期限 15 天。",
+              "score": 6
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/conflict.json",
+      "data_sha256": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D02",
+            "title": "报销期限",
+            "version_date": "2026-10-15",
+            "content": "报销期限 15 天。"
+          }
+        ],
+        "faults": {}
+      }
+    },
+    {
+      "scenario": "conflict",
+      "input": {
+        "query": "报销期限多久？",
+        "limit": 5
+      },
+      "actual_tool_result": {
+        "ok": true,
+        "data": {
+          "query": "报销期限多久？",
+          "matches": [
+            {
+              "id": "D01",
+              "version_date": "2026-10-01",
+              "title": "报销期限",
+              "summary": "报销期限 30 天。",
+              "score": 6
+            },
+            {
+              "id": "D02",
+              "version_date": "2026-10-15",
+              "title": "报销期限",
+              "summary": "报销期限 15 天。",
+              "score": 6
+            }
+          ],
+          "total_matches": 2,
+          "has_more": false
+        }
+      },
+      "data_file": "data/scenarios/conflict.json",
+      "data_sha256": "a8cf8e1e86aaa65924249efccbdf1fdeb7cab2b4c90d954cda0c9a3e23322b75",
+      "documents_snapshot": {
+        "documents": [
+          {
+            "id": "D01",
+            "title": "报销期限",
+            "version_date": "2026-10-01",
+            "content": "报销期限 30 天。"
+          },
+          {
+            "id": "D02",
+            "title": "报销期限",
+            "version_date": "2026-10-15",
+            "content": "报销期限 15 天。"
+          }
+        ],
+        "faults": {}
+      }
+    }
+  ]
+}

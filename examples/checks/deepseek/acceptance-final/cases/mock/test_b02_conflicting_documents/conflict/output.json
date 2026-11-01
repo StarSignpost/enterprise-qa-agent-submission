@@ -1,0 +1,39 @@
+{
+  "run_id": "a5138934-63cb-418d-844b-4765e3aff758",
+  "mode": "mock",
+  "model": "mock-script-v1",
+  "answer": "D01 记载 30 天，D02 记载 15 天。请确认适用制度，不能只按日期选择。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "version_date": "2026-10-01",
+      "quote": "报销期限 30 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "mock-2"
+    },
+    {
+      "document_id": "D02",
+      "version_date": "2026-10-15",
+      "quote": "报销期限 15 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "mock-3"
+    }
+  ],
+  "gaps": [
+    "缺少适用范围及优先级依据"
+  ],
+  "status": "needs_clarification",
+  "termination_source": "model",
+  "steps_used": 5,
+  "tool_calls": 4,
+  "api_calls": 0,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "verdict": "not_run",
+      "method": "not_required_for_noncompleted"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-11-01T18:58:10.069235+08:00",
+  "user_proposed": [
+    "要求先解释再选择、小范围可验证改进",
+    "要求只改变资料或工具返回的反事实验证，并保存前后证据",
+    "要求区分个人与AI修改/执行/复核"
+  ],
+  "user_selected": {
+    "actual_message": "可以，补充一个短语映射",
+    "choice": "采纳报销时效 -> 报销期限方案"
+  },
+  "ai_proposed": "根据实际工具探测提出该映射及A0/A1/B1验证安排",
+  "ai_coded": [
+    "src/tools.py的一条映射",
+    "tests/test_tools.py的两项回归",
+    "tests/test_live.py的同义问法真实对照入口"
+  ],
+  "ai_executed": [
+    "4组修改前工具基线（上一轮）",
+    "修改后4组同输入工具探测",
+    "修改前A0与修改后A1/B1真实运行",
+    "完整离线回归70通过、12真实未运行",
+    "证据、资料差异、源码差异和引用核验及报告整理",
+    "补充项目目录说明；在E:/temp2实际执行python -m unittest tests.test_tools -v，22项通过，记录与用户失败分开。"
+  ],
+  "user_manual_edits": {
+    "status": "no_evidence_received",
+    "files": []
+  },
+  "user_executed": {
+    "status": "reported_failure",
+    "commands": [
+      {
+        "working_directory": "%USERPROFILE% (outside project; redacted)",
+        "command": "python -m unittest tests.test_tools -v",
+        "outcome": "module_import_failed",
+        "project_tool_tests_executed": 0,
+        "evidence": "review-command-fix/user-attempt-01.json"
+      }
+    ]
+  },
+  "user_review": {
+    "status": "in_progress",
+    "reviewed_artifacts": [],
+    "confirmation": null,
+    "latest_attempt": "用户确实执行过工具测试命令，但模块加载失败；切换项目目录后的用户重跑尚未确认，不算工具测试通过或完成反事实复核。"
+  },
+  "recording_rule": "只有收到用户实际操作/核查内容和结果才补充，选择方案不等于手工编码或已经验收。",
+  "updated_at": "2026-11-01T19:09:34.397552+08:00"
+}

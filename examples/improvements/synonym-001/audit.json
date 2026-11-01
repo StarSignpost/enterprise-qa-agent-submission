@@ -1,0 +1,47 @@
+{
+  "record_kind": "saved_improvement_evidence_audit",
+  "checked_at": "2026-11-01T18:58:10.070772+08:00",
+  "outcome": "passed",
+  "real_bundles_checked": 3,
+  "required_bundle_files": [
+    "input.json",
+    "output.json",
+    "trace.jsonl",
+    "run.json",
+    "documents.json"
+  ],
+  "citations_checked": 6,
+  "tool_result_feedback_checked": true,
+  "input_and_configuration_equal": true,
+  "A0_A1_runtime_changed_files": [
+    "src/tools.py"
+  ],
+  "A1_B1_only_changed": "D02.content: 报销期限 15 天。 -> 报销期限 30 天。",
+  "implementation_diff": "implementation.patch",
+  "source_snapshots": [
+    "before-source/",
+    "after-source/"
+  ],
+  "limitations": "检查保存证据和代码回传关系，非独立网络抓包或人工签署",
+  "credential_scan": {
+    "outcome": "passed",
+    "method": "pattern-only scan for long sk-prefixed credential tokens; does not save or print matches",
+    "files_checked": 963,
+    "matches": 0,
+    "scope": "project code/tests/docs/examples/data and configuration; excludes original exam and binary caches",
+    "checked_at": "2026-11-01T19:00:46.848795+08:00"
+  },
+  "documentation_links": {
+    "outcome": "passed",
+    "links_checked": 76,
+    "broken": []
+  },
+  "execution_note": "一次证据整理命令启动后退出-1073741523且无输出；检查未生成目标文件，以login:false重试成功，原因未确认。该事件不是模型/测试失败，未重跑或修改其Trace。",
+  "current_source_matches_reports": [
+    "offline/test-report.json",
+    "after-real/test-report.json"
+  ],
+  "user_review": "in_progress; user-reported module import failure; corrected user rerun not confirmed",
+  "user_review_evidence": "review-command-fix/user-attempt-01.json",
+  "user_review_updated_at": "2026-11-01T19:09:34.404667+08:00"
+}

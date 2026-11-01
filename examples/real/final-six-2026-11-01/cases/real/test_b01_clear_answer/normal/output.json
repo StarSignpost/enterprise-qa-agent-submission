@@ -1,0 +1,31 @@
+{
+  "run_id": "618f4419-310d-4cc1-852c-ff94a727c6e0",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "answer": "根据《报销期限》（2026-10-01 版），报销期限为 30 天。该文档未进一步说明 30 天从何时起算（如费用发生日或发票开具日），如有需要可按具体情况进一步确认。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "version_date": "2026-10-01",
+      "quote": "报销期限 30 天。",
+      "start": 0,
+      "end": 10,
+      "read_call_id": "call_00_FuJc8zzcDjjYkbcsQVH86858"
+    }
+  ],
+  "gaps": [],
+  "status": "completed",
+  "termination_source": "model",
+  "steps_used": 4,
+  "tool_calls": 2,
+  "api_calls": 4,
+  "verification": {
+    "citation_integrity": "passed",
+    "semantic_support": {
+      "reason": "原文“报销期限 30 天。”逐字支持引用，回答仅陈述该期限并说明起算日未载明，未过度推广。",
+      "verdict": "supported",
+      "method": "same_model_review",
+      "mode": "real"
+    }
+  }
+}
